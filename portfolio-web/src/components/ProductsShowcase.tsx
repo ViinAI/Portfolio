@@ -23,15 +23,15 @@ export function ProductsShowcase() {
 
   const getProductIcon = (id: string, className = 'w-5 h-5') => {
     switch (id) {
-      case 'agent-execution-engine':
+      case 'execution-harness':
         return <Cpu className={className} />;
       case 'gvisor-sandbox':
         return <Shield className={className} />;
       case 'mcp-platform':
         return <Box className={className} />;
-      case 'process-harness-product':
+      case 'process-centric-harness':
         return <Workflow className={className} />;
-      case 'genai-rag-suite':
+      case 'user-centric-harness':
         return <Sparkles className={className} />;
       default:
         return <Layers className={className} />;
@@ -47,11 +47,10 @@ export function ProductsShowcase() {
             Core Products & Platforms
           </span>
           <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold tracking-tight text-[#1d1d1f] mb-4">
-            Five Production Systems.
+            Platform Systems & Products.
           </h2>
-          <p className="text-[#86868b] text-sm sm:text-base leading-relaxed">
-            Detailed engineering breakdowns of five foundational platforms and enterprise AI products designed,
-            built, and deployed into mission-critical production.
+          <p className="text-[#86868b] text-sm sm:text-base leading-relaxed max-w-2xl">
+            Architected around <strong className="text-[#1d1d1f]">3 Foundational Infrastructure Components</strong> (Execution Harness, gVisor Sandbox, and MCP Platform) composed into <strong className="text-[#1d1d1f]">2 Enterprise Products</strong> (Process-Centric and User-Centric Harnesses).
           </p>
         </div>
 
