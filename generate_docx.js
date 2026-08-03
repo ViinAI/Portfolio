@@ -1,185 +1,151 @@
 const docx = require('docx');
 const fs = require('fs');
-const { Document, Packer, Paragraph, TextRun, HeadingLevel, AlignmentType, BorderStyle } = docx;
+const { Document, Packer, Paragraph, TextRun, AlignmentType, BorderStyle } = docx;
 
 const doc = new Document({
   sections: [{
     properties: {
       page: {
-        margin: {
-          top: 720,    // 0.5 inch
-          bottom: 720,
-          left: 800,
-          right: 800,
-        }
+        margin: { top: 620, bottom: 620, left: 720, right: 720 }
       }
     },
     children: [
       // Name
       new Paragraph({
         alignment: AlignmentType.CENTER,
-        spacing: { after: 60 },
+        spacing: { after: 40 },
         children: [
-          new TextRun({
-            text: "Vinay Kumar",
-            bold: true,
-            size: 36, // 18pt
-            font: "Times New Roman"
-          })
+          new TextRun({ text: "Vinay Kumar", bold: true, size: 34, font: "Times New Roman" })
         ]
       }),
-      // Subtitle
+      // Title
       new Paragraph({
         alignment: AlignmentType.CENTER,
-        spacing: { after: 60 },
+        spacing: { after: 40 },
         children: [
-          new TextRun({
-            text: "Senior AI Engineer & Agentic Systems Architect",
-            bold: true,
-            size: 24, // 12pt
-            font: "Times New Roman"
-          })
+          new TextRun({ text: "Senior AI Engineer", bold: true, size: 22, font: "Times New Roman" })
         ]
       }),
       // Contact
       new Paragraph({
         alignment: AlignmentType.CENTER,
-        spacing: { after: 140 },
+        spacing: { after: 100 },
         children: [
-          new TextRun({ text: "Pune, India  —  9992394789  —  ", size: 19, font: "Times New Roman" }),
-          new TextRun({ text: "viinaimadotra@gmail.com", size: 19, color: "0000EE", underline: {}, font: "Times New Roman" }),
-          new TextRun({ text: "  |  ", size: 19, font: "Times New Roman" }),
-          new TextRun({ text: "LinkedIn: in/viinai", size: 19, color: "0000EE", underline: {}, font: "Times New Roman" }),
-          new TextRun({ text: "  |  ", size: 19, font: "Times New Roman" }),
-          new TextRun({ text: "GitHub: github.com/ViinAI", size: 19, color: "0000EE", underline: {}, font: "Times New Roman" })
+          new TextRun({ text: "Pune, India  —  9992394789  —  ", size: 18, font: "Times New Roman" }),
+          new TextRun({ text: "viinaimadotra@gmail.com", size: 18, color: "0000EE", underline: {}, font: "Times New Roman" }),
+          new TextRun({ text: "  |  ", size: 18, font: "Times New Roman" }),
+          new TextRun({ text: "LinkedIn: in/viinai", size: 18, color: "0000EE", underline: {}, font: "Times New Roman" }),
+          new TextRun({ text: "  |  ", size: 18, font: "Times New Roman" }),
+          new TextRun({ text: "GitHub: github.com/ViinAI", size: 18, color: "0000EE", underline: {}, font: "Times New Roman" })
         ]
       }),
 
-      // Professional Summary Heading
-      createSectionHeading("Professional Summary"),
+      // Professional Summary
+      sectionHeading("Professional Summary"),
       new Paragraph({
-        spacing: { after: 120 },
+        spacing: { after: 80 },
         children: [
           new TextRun({
-            text: "Senior AI Engineer and Architect with 5.5+ years of experience across Data Science, Predictive Analytics, and Enterprise Agentic AI Platforms. Proven track record designing foundational AI infrastructure (gVisor secure sandboxes, event-log execution harnesses, and Model Context Protocol/MCP platforms) and scaling production products across Process Automation (driving a $300M Telecom transformation deal with a 16-agent HITL pipeline) and User-Centric Harnesses exposed via Web, CLI, VS Code Extension, and SDKs.",
-            size: 19,
-            font: "Times New Roman"
+            text: "Senior AI Engineer with 5.5+ years of experience in enterprise AI platform development, ML engineering, and Data Science. Designed and built foundational agent infrastructure, composed it into enterprise-grade products, and architected diverse AI solutions across multiple domains and clients at Infosys.",
+            size: 18, font: "Times New Roman"
           })
         ]
       }),
 
-      // Professional Experience Heading
-      createSectionHeading("Professional Experience"),
+      // Professional Experience
+      sectionHeading("Professional Experience"),
 
-      // Infosys Header
-      createJobHeader("Infosys — Senior Data Scientist / AI Engineer", "Dec 2024 – Present"),
-      createBullet("Foundational Sandbox Platform: ", "Architected a DeepAgent-compatible execution sandbox leveraging gVisor, enforcing microVM-level isolation, deterministic reproducibility, and strict security governance for untrusted agent code, MCP servers, and dynamic skills."),
-      createBullet("Event-Driven Execution Harness: ", "Engineered a core agent execution runtime featuring event-log-driven state reconstruction, dynamic context projection, checkpointing, and long-running workflow continuity for complete observability and auditability."),
-      createBullet("MCP Platform & Skill Engine: ", "Built an AI-assisted authoring, registration, validation, and lifecycle onboarding portal for Model Context Protocol (MCP) servers and reusable enterprise skills, standardizing multi-tool connectivity across ecosystems."),
-      createBullet("User-Centric Harness Multi-Surface Product: ", "Designed and shipped a modular agent platform exposed across four primary interaction surfaces: Web Portal, Terminal CLI, VS Code Extension, and Client SDKs for workspace-centric agent execution and user onboarding."),
-      createBullet("Process Automation Harness ($300M Deal): ", "Architected full-stack enterprise agentic workflows for a Tier-1 global telecom operator, boosting process efficiency by 40% and directly driving the acquisition of a $300M AI transformation deal."),
-      createBullet("16-Agent Production Pipeline: ", "Engineered an autonomous 16-agent pipeline with 5 Human-in-the-Loop (HITL) checkpoints, delivering 95% straight-through automation across complex enterprise operations."),
-      createBullet("Proprietary LLM Compiler: ", "Built an LLM execution optimizer (dynamic prompt planning, semantic caching, and tool routing) that slashed median query latency by 35% while preserving output accuracy."),
-      createBullet("Contract Intelligence System: ", "Deployed automated contract comparison and clause-risk analysis agents across 5 enterprise clients, reducing manual legal review time by 60%."),
+      // Infosys
+      jobHeader("Infosys — Senior AI Engineer", "Dec 2024 – Present"),
 
-      // Xcaliber Header
-      createJobHeader("Xcaliber Infotech — Data Scientist / AI-ML Engineer", "Dec 2022 – Dec 2024, Pune"),
-      createBullet("Summarization Microservice: ", "Built a high-throughput text summarization microservice using LLaMA, BART, spaCy, and PyTorch to process OEM comments for delivery waivers, integrating with warehouse ERPs to improve inventory turnover."),
-      createBullet("Enterprise RAG Chatbot: ", "Developed an enterprise conversational assistant using LangChain, Hugging Face Transformers, ChromaDB, and Flask, cutting internal document lookup times by 40%."),
-      createBullet("Accessory Recommender: ", "Designed a collaborative affinity recommendation engine dynamically matching regional inventory with customer purchase patterns, boosting weekly accessory bundle sales by 25%."),
-      createBullet("API & Telemetry Layer: ", "Developed secure REST APIs and real-time operations dashboards for role-based analytics, audit tracking, and LLM feedback ingestion."),
+      subHeading("Foundational Components"),
+      bullet("Execution Harness: ", "Designed and built a bespoke event-driven agent execution engine supporting deterministic state reconstruction, checkpointing, and long-running workflow continuity across distributed agent instances."),
+      bullet("Sandbox: ", "Built an isolated execution sandbox leveraging gVisor for secure, reproducible execution of untrusted agent code, MCP servers, and dynamically loaded skills."),
+      bullet("MCP Platform: ", "Created a platform for importing, building, and hosting Model Context Protocol (MCP) servers with AI-assisted authoring, validation, and lifecycle management."),
 
-      // Concentrix Header
-      createJobHeader("Concentrix India — Data Analyst", "Oct 2015 – Apr 2017, Gurgaon"),
-      createBullet("Analytics Pipelines: ", "Built automated Python and SQL ETL pipelines and executive reporting dashboards for operational analytics."),
-      createBullet("Predictive Modeling: ", "Conducted statistical exploratory analysis, regression, and classification modeling to support business forecasting and workforce planning."),
+      subHeading("Products"),
+      bullet("Process-Centric Harness: ", "Composed foundational components into a full product enabling end-to-end process authoring, skill linking, OpenAPI spec onboarding, and autonomous execution. Deployed across multiple enterprise clients and under active go-to-market."),
+      bullet("User-Centric Harness: ", "Built a multi-surface developer platform — including Web Portal (AGUI/A2UI), CLI, and VS Code Extension — exposing agent capabilities for developer and operational workflows."),
 
-      // Skills Heading
-      createSectionHeading("Skills"),
-      createBullet("Foundations & Agentic Systems: ", "gVisor Agent Sandboxing, Event-Log State Reconstruction, Model Context Protocol (MCP), Skill Authoring Platforms, Multi-Agent Orchestration (CrewAI, LangGraph, AutoGen), LLM Compilers, Semantic Caching, HITL Governance."),
-      createBullet("Exposure Surfaces & Tooling: ", "VS Code Extensions, CLI Tooling, Client SDKs, Web Portals, RESTful APIs, WebSocket Streaming."),
-      createBullet("GenAI & LLMs: ", "LLaMA 2/3, Mistral, GPT-4/Azure OpenAI, Hugging Face Transformers, BERT, RoBERTa, BART, LangChain, RAG Systems, Vector DBs (ChromaDB, Pinecone, FAISS, Redis), Guardrails & LLM-as-a-judge."),
-      createBullet("Machine Learning, NLP & Data Science: ", "Scikit-Learn, PyTorch, TensorFlow, Keras, spaCy, NLTK, Word2Vec, TF-IDF, NER, Regression, Classification, Clustering, Time-Series Modeling."),
-      createBullet("Languages, Cloud & Infrastructure: ", "Python (NumPy, Pandas, Matplotlib), SQL (PostgreSQL, MySQL), FastAPI, Flask, Docker, Kubernetes, AWS (EC2, S3, SageMaker, Lambda), CI/CD Pipelines, Git/GitHub, Linux/gVisor."),
+      subHeading("Solution Architecture & Deal Wins"),
+      bullet("", "Independently architected diverse AI solutions — including a $300M Telecom transformation, Digital Tutor platform, and CMDB platform — driving multiple deal wins for Infosys."),
 
-      // Education Heading
-      createSectionHeading("Education"),
+      subHeading("Technical"),
+      bullet("LLM Compiler: ", "Built a proprietary LLM execution optimizer with dynamic prompt planning and semantic caching, reducing median query latency by 35%."),
+
+      // Xcaliber
+      jobHeader("Xcaliber Infotech (A Phoenix Group Company) — Data Scientist / AI-ML Engineer", "Dec 2022 – Dec 2024, Pune"),
+      bullet("Summarization Microservice: ", "Built a high-throughput text summarization service using LLaMA, BART, spaCy, and PyTorch to process OEM delivery waiver comments, integrating with warehouse ERP systems."),
+      bullet("Enterprise RAG Assistant: ", "Developed a conversational assistant using LangChain, ChromaDB, and Hugging Face Transformers, reducing internal document lookup time by 40%."),
+      bullet("Accessory Recommender: ", "Designed a location-aware affinity recommendation engine matching regional inventory with purchase patterns, boosting weekly accessory bundle sales by 25%."),
+      bullet("API & Telemetry Layer: ", "Developed REST APIs and real-time operations dashboards for role-based analytics and audit tracking."),
+
+      // Concentrix
+      jobHeader("Concentrix India — Data Analyst", "Oct 2015 – Apr 2017, Gurgaon"),
+      bullet("Analytics Pipelines: ", "Built automated Python and SQL ETL pipelines and executive reporting dashboards."),
+      bullet("Predictive Modeling: ", "Performed regression and classification modeling for business forecasting and workforce planning."),
+
+      // Skills
+      sectionHeading("Skills"),
+      bullet("AI Platform & Agent Systems: ", "Event-Driven Architecture, Agent Execution Harnesses, gVisor Sandboxing, Model Context Protocol (MCP), Process Orchestration, Multi-Agent Systems, Semantic Caching, LLM Compilers."),
+      bullet("GenAI & LLM Engineering: ", "LLaMA, Mistral, GPT-4/Azure OpenAI, Hugging Face Transformers, BERT, BART, RoBERTa, LangChain, RAG Architectures, Vector DBs (ChromaDB, Pinecone, FAISS)."),
+      bullet("Machine Learning & Data Science: ", "PyTorch, TensorFlow, Scikit-Learn, spaCy, NLTK, NER, Regression, Classification, Clustering, Time-Series, Recommendation Systems."),
+      bullet("Languages & Infrastructure: ", "Python, TypeScript, SQL (PostgreSQL, MySQL), FastAPI, Flask, Docker, Kubernetes, AWS (EC2, S3, SageMaker, Lambda), Git, CI/CD, Linux."),
+
+      // Education
+      sectionHeading("Education"),
       new Paragraph({
-        spacing: { before: 40, after: 20 },
+        spacing: { before: 30, after: 15 },
         children: [
-          new TextRun({ text: "PG-Diploma in Artificial Intelligence (PGDAI)", bold: true, size: 19, font: "Times New Roman" }),
-          new TextRun({ text: " — CDAC, Pune, 2022", size: 19, font: "Times New Roman" })
+          new TextRun({ text: "PG-Diploma in Artificial Intelligence (PGDAI)", bold: true, size: 18, font: "Times New Roman" }),
+          new TextRun({ text: " — C-DAC, Pune, 2022", size: 18, font: "Times New Roman" })
         ]
       }),
       new Paragraph({
-        spacing: { after: 60 },
+        spacing: { after: 40 },
         children: [
-          new TextRun({ text: "B.Tech in Mechanical Engineering", bold: true, size: 19, font: "Times New Roman" }),
-          new TextRun({ text: " — JIET, Jind, 2014", size: 19, font: "Times New Roman" })
+          new TextRun({ text: "B.Tech in Mechanical Engineering", bold: true, size: 18, font: "Times New Roman" }),
+          new TextRun({ text: " — JIET, Jind, 2014", size: 18, font: "Times New Roman" })
         ]
       })
     ]
   }]
 });
 
-function createSectionHeading(title) {
+function sectionHeading(title) {
   return new Paragraph({
-    spacing: { before: 100, after: 40 },
-    border: {
-      bottom: {
-        color: "000000",
-        space: 1,
-        style: BorderStyle.SINGLE,
-        size: 6,
-      },
-    },
+    spacing: { before: 80, after: 30 },
+    border: { bottom: { color: "000000", space: 1, style: BorderStyle.SINGLE, size: 6 } },
+    children: [ new TextRun({ text: title, bold: true, size: 20, font: "Times New Roman" }) ]
+  });
+}
+
+function jobHeader(title, date) {
+  return new Paragraph({
+    spacing: { before: 60, after: 15 },
     children: [
-      new TextRun({
-        text: title,
-        bold: true,
-        size: 22, // 11pt
-        font: "Times New Roman"
-      })
+      new TextRun({ text: title, bold: true, size: 18, font: "Times New Roman" }),
+      new TextRun({ text: "\t" + date, bold: true, size: 18, font: "Times New Roman" })
     ]
   });
 }
 
-function createJobHeader(title, date) {
+function subHeading(title) {
   return new Paragraph({
-    spacing: { before: 80, after: 20 },
+    spacing: { before: 30, after: 10 },
     children: [
-      new TextRun({
-        text: title,
-        bold: true,
-        size: 20, // 10pt
-        font: "Times New Roman"
-      }),
-      new TextRun({
-        text: "\t" + date,
-        bold: true,
-        size: 20,
-        font: "Times New Roman"
-      })
+      new TextRun({ text: title, bold: true, italics: true, size: 17, font: "Times New Roman", color: "333333" })
     ]
   });
 }
 
-function createBullet(lead, text) {
+function bullet(lead, text) {
   return new Paragraph({
     bullet: { level: 0 },
-    spacing: { after: 20 },
+    spacing: { after: 15 },
     children: [
-      new TextRun({
-        text: lead,
-        bold: true,
-        size: 18.5, // 9.25pt
-        font: "Times New Roman"
-      }),
-      new TextRun({
-        text: text,
-        size: 18.5,
-        font: "Times New Roman"
-      })
+      ...(lead ? [new TextRun({ text: lead, bold: true, size: 17.5, font: "Times New Roman" })] : []),
+      new TextRun({ text: text, size: 17.5, font: "Times New Roman" })
     ]
   });
 }
