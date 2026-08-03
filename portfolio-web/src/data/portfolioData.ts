@@ -323,7 +323,7 @@ const ragResponse = await langChainBot.query(summary);`,
       period: 'Dec 2024 – Present',
       location: 'Pune, India',
       summary:
-        'Led digital transformation for a Tier-1 telecom, architected a 16-agent pipeline, and spearheaded an internal agentic platform to standardize enterprise AI deployments.',
+        'Led digital transformation for a Tier-1 telecom, architected a 16-agent pipeline, built internal agentic platforms, gVisor sandboxes, and MCP authoring tools.',
       achievements: [
         {
           description:
@@ -357,13 +357,33 @@ const ragResponse = await langChainBot.query(summary);`,
         },
         {
           description:
-            'Architected a DeepAgent-compatible sandbox platform based on gVisor, enabling secure execution environments for AI agents, MCP servers, and user-authored skills.',
-          tags: ['gVisor', 'DeepAgent Sandbox', 'MCP Servers'],
+            'Architected a DeepAgent-compatible sandbox platform based on gVisor, enabling secure execution environments for AI agents, MCP servers, and user-authored skills while supporting isolation, reproducibility, and enterprise governance requirements.',
+          tags: ['gVisor Sandbox', 'Isolation', 'Enterprise Governance'],
         },
         {
           description:
-            'Built an AI-assisted MCP Authoring and Onboarding Portal that simplifies creation, registration, validation, and lifecycle management of MCP servers.',
+            'Designed and evolved a full agentic execution harness built around event-log-driven orchestration, custom context projection, state reconstruction, and long-running workflow continuity, improving observability and auditability of complex multi-agent processes.',
+          tags: ['Event-Log Harness', 'State Reconstruction', 'Observability'],
+        },
+        {
+          description:
+            'Led development of an AI-assisted Skill Authoring Platform that accelerates creation, testing, packaging, and onboarding of reusable enterprise skills through guided generation, dependency management, and deployment workflows.',
+          tags: ['Skill Authoring', 'Guided Generation', 'Enterprise Skills'],
+        },
+        {
+          description:
+            'Built an AI-assisted MCP Authoring and Onboarding Portal that simplifies creation, registration, validation, and lifecycle management of MCP servers, reducing integration effort and standardizing enterprise tool connectivity.',
           tags: ['MCP Portal', 'Lifecycle Management', 'Tool Connectivity'],
+        },
+        {
+          description:
+            'Developed a modular User Onboarding Platform capable of operating independently or integrating with sandbox infrastructure, providing environment provisioning, access management, onboarding workflows, and operational governance across agent ecosystems.',
+          tags: ['User Onboarding', 'Environment Provisioning', 'Access Management'],
+        },
+        {
+          description:
+            'Defined platform architecture for workspace-centric agent execution, enabling agents, skills, MCP servers, and orchestration components to collaborate within shared execution environments while maintaining security boundaries and traceability.',
+          tags: ['Workspace Architecture', 'Security Boundaries', 'Traceability'],
         },
       ],
       techStack: [
@@ -373,6 +393,8 @@ const ragResponse = await langChainBot.query(summary);`,
         'Model Context Protocol',
         'Event-Log Orchestration',
         'State Reconstruction',
+        'LangChain',
+        'PyTorch',
       ],
     },
     {
@@ -423,7 +445,7 @@ const ragResponse = await langChainBot.query(summary);`,
       period: 'Oct 2015 – Apr 2017',
       location: 'Gurgaon, India',
       summary:
-        'Built operational pipelines and performed exploratory analysis to support business reporting.',
+        'Built Python/SQL pipelines and dashboards for operations analytics and business reporting.',
       achievements: [
         {
           description:
