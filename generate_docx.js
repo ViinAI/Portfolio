@@ -128,6 +128,7 @@ function sectionHeading(title) {
 function companyHeader(title, meta, addSep = false) {
   return new Paragraph({
     spacing: { before: addSep ? 80 : 45, after: 15 },
+    border: { bottom: { color: "9CA3AF", space: 1, style: BorderStyle.SINGLE, size: 4 } },
     tabStops: [
       { type: TabStopType.RIGHT, position: TabStopPosition.MAX }
     ],
