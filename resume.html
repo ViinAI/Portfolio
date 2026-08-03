@@ -4,7 +4,6 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Vinay Kumar - Senior AI Engineer</title>
-  
   <style>
 @font-face {
       font-family: 'EB Garamond';
@@ -53,8 +52,8 @@
       background: #f4f4f6;
       font-family: "EB Garamond", "Times New Roman", Times, serif;
       color: #111;
-      line-height: 1.28;
-      font-size: 9.6pt;
+      line-height: 1.285;
+      font-size: 9.65pt;
       padding: 15px 10px;
       display: flex;
       flex-direction: column;
@@ -88,7 +87,7 @@
       background: #fff;
       width: 210mm;
       min-height: 297mm;
-      padding: 7.5mm 12mm;
+      padding: 8mm 12mm;
       box-shadow: 0 4px 14px rgba(0,0,0,0.08);
       page-break-inside: avoid;
     }
@@ -109,49 +108,28 @@
     .summary-p {
       text-align: justify;
       margin-bottom: 4.5px;
-      font-size: 9.6pt;
-      line-height: 1.28;
+      font-size: 9.65pt;
+      line-height: 1.285;
     }
     .company-block {
-      margin-bottom: 3px;
+      margin-bottom: 2px;
     }
     .company-block-sep {
       margin-top: 6px;
-      padding-top: 3px;
     }
     .job-header {
       display: flex;
       justify-content: space-between;
-      align-items: baseline;
-      margin-top: 4.5px;
-      margin-bottom: 2px;
-    }
-    .company-name {
-      font-size: 10.2pt;
       font-weight: 700;
-      color: #000;
-    }
-    .company-sub {
-      font-size: 8.8pt;
-      color: #444;
-      font-weight: 400;
-    }
-    .role-title {
-      font-size: 9.6pt;
-      font-weight: 600;
-      color: #222;
-    }
-    .job-meta {
-      font-size: 9.3pt;
-      font-weight: 600;
-      color: #333;
+      margin-top: 4px;
+      margin-bottom: 2px;
+      font-size: 9.7pt;
     }
     .sub-heading {
       font-weight: 700;
-      font-size: 8.4pt;
-      text-transform: uppercase;
-      letter-spacing: 0.5px;
-      color: #4b5563;
+      font-size: 9.1pt;
+      font-style: italic;
+      color: #333;
       margin-top: 3.5px;
       margin-bottom: 1.5px;
     }
@@ -163,7 +141,7 @@
     li {
       margin-bottom: 2px;
       text-align: justify;
-      font-size: 9.6pt;
+      font-size: 9.65pt;
       line-height: 1.27;
     }
     .skills-section li {
@@ -171,16 +149,15 @@
     }
     .education-item {
       margin-bottom: 1px;
-      font-size: 9.6pt;
+      font-size: 9.65pt;
     }
     @media print {
       body { background: transparent; padding: 0; }
       .actions-bar { display: none; }
-      .page { width: 100%; box-shadow: none; padding: 7.5mm 10mm; margin: 0; min-height: auto; }
+      .page { width: 100%; box-shadow: none; padding: 8mm 10mm; margin: 0; min-height: auto; }
       @page { size: A4; margin: 0; }
     }
-  
-</style>
+  </style>
 </head>
 <body>
 
@@ -206,14 +183,13 @@
       </p>
     </section>
 
-    
     <section>
       <h2>Professional Experience</h2>
 
       <div class="company-block">
         <div class="job-header">
-          <div><strong class="company-name">Infosys</strong> <span class="role-title">— Senior AI Engineer</span></div>
-          <div class="job-meta">Dec 2024 – Present</div>
+          <span>Infosys — Senior AI Engineer</span>
+          <span>Dec 2024 – Present</span>
         </div>
 
         <div class="sub-heading">Foundational Components</div>
@@ -242,8 +218,8 @@
 
       <div class="company-block company-block-sep">
         <div class="job-header">
-          <div><strong class="company-name">Xcaliber Infotech</strong> <span class="company-sub">(A Phoenix Group Company)</span> <span class="role-title">— Data Scientist / AI-ML Engineer</span></div>
-          <div class="job-meta">Dec 2022 – Dec 2024 | Pune</div>
+          <span>Xcaliber Infotech (A Phoenix Group Company) — Data Scientist / AI-ML Engineer</span>
+          <span>Dec 2022 – Dec 2024, Pune</span>
         </div>
         <ul>
           <li><strong>Summarization Microservice:</strong> Built a high-throughput text summarization service using LLaMA, BART, spaCy, and PyTorch to process OEM delivery waiver comments, integrating with warehouse ERP systems.</li>
@@ -255,8 +231,8 @@
 
       <div class="company-block company-block-sep">
         <div class="job-header">
-          <div><strong class="company-name">Concentrix India</strong> <span class="role-title">— Data Analyst</span></div>
-          <div class="job-meta">Oct 2015 – Apr 2017 | Gurgaon</div>
+          <span>Concentrix India — Data Analyst</span>
+          <span>Oct 2015 – Apr 2017, Gurgaon</span>
         </div>
         <ul>
           <li><strong>Analytics Pipelines:</strong> Built automated Python and SQL ETL pipelines and executive reporting dashboards.</li>
@@ -264,7 +240,6 @@
         </ul>
       </div>
     </section>
-  
 
     <section>
       <h2>Skills</h2>
@@ -278,8 +253,12 @@
 
     <section>
       <h2>Education</h2>
-      <div class="education-item"><strong>PG-Diploma in Artificial Intelligence (PGDAI)</strong> — C-DAC, Pune, 2022</div>
-      <div class="education-item"><strong>B.Tech in Mechanical Engineering</strong> — JIET, Jind, 2014</div>
+      <div class="education-item">
+        <strong>PG-Diploma in Artificial Intelligence (PGDAI)</strong> — C-DAC, Pune, 2022
+      </div>
+      <div class="education-item">
+        <strong>B.Tech in Mechanical Engineering</strong> — JIET, Jind, 2014
+      </div>
     </section>
   </div>
 

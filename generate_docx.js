@@ -61,32 +61,32 @@ const doc = new Document({
       sectionHeading("Professional Experience"),
 
       // Infosys
-      companyHeader("Infosys", "Senior AI Engineer", "Dec 2024 – Present"),
+      companyHeader("Infosys — Senior AI Engineer", "Dec 2024 – Present"),
 
-      subHeading("FOUNDATIONAL COMPONENTS"),
+      subHeading("Foundational Components"),
       bullet("Execution Harness: ", "Designed and built a bespoke event-driven agent execution engine supporting deterministic state reconstruction, checkpointing, and long-running workflow continuity across distributed agent instances."),
       bullet("Sandbox: ", "Built an isolated execution sandbox leveraging gVisor for secure, reproducible execution of untrusted agent code, MCP servers, and dynamically loaded skills."),
       bullet("MCP Platform: ", "Created a platform for importing, building, and hosting Model Context Protocol (MCP) servers with AI-assisted authoring, validation, and lifecycle management."),
 
-      subHeading("PRODUCTS"),
+      subHeading("Products"),
       bullet("Process-Centric Harness: ", "Composed foundational components into a full product enabling end-to-end process authoring, skill linking, OpenAPI spec onboarding, and autonomous execution. Deployed across multiple enterprise clients and under active go-to-market."),
       bullet("User-Centric Harness: ", "Built a multi-surface developer platform — including Web Portal (AGUI/A2UI), CLI, and VS Code Extension — exposing agent capabilities for developer and operational workflows."),
 
-      subHeading("SOLUTION ARCHITECTURE & DEAL WINS"),
+      subHeading("Solution Architecture & Deal Wins"),
       bullet("", "Independently architected diverse AI solutions — including a $300M Telecom transformation, Digital Tutor platform, and CMDB platform — driving multiple deal wins for Infosys."),
 
-      subHeading("TECHNICAL"),
+      subHeading("Technical"),
       bullet("LLM Compiler: ", "Built a proprietary LLM execution optimizer with dynamic prompt planning and semantic caching, reducing median query latency by 35%."),
 
       // Xcaliber
-      companyHeader("Xcaliber Infotech (A Phoenix Group Company)", "Data Scientist / AI-ML Engineer", "Dec 2022 – Dec 2024 | Pune", true),
+      companyHeader("Xcaliber Infotech (A Phoenix Group Company) — Data Scientist / AI-ML Engineer", "Dec 2022 – Dec 2024, Pune", true),
       bullet("Summarization Microservice: ", "Built a high-throughput text summarization service using LLaMA, BART, spaCy, and PyTorch to process OEM delivery waiver comments, integrating with warehouse ERP systems."),
       bullet("Enterprise RAG Assistant: ", "Developed a conversational assistant using LangChain, ChromaDB, and Hugging Face Transformers, reducing internal document lookup time by 40%."),
       bullet("Accessory Recommender: ", "Designed a location-aware affinity recommendation engine matching regional inventory with purchase patterns, boosting weekly accessory bundle sales by 25%."),
       bullet("API & Telemetry Layer: ", "Developed REST APIs and real-time operations dashboards for role-based analytics and audit tracking."),
 
       // Concentrix
-      companyHeader("Concentrix India", "Data Analyst", "Oct 2015 – Apr 2017 | Gurgaon", true),
+      companyHeader("Concentrix India — Data Analyst", "Oct 2015 – Apr 2017, Gurgaon", true),
       bullet("Analytics Pipelines: ", "Built automated Python and SQL ETL pipelines and executive reporting dashboards."),
       bullet("Predictive Modeling: ", "Performed regression and classification modeling for business forecasting and workforce planning."),
 
@@ -125,15 +125,14 @@ function sectionHeading(title) {
   });
 }
 
-function companyHeader(company, role, meta, addSep = false) {
+function companyHeader(title, meta, addSep = false) {
   return new Paragraph({
-    spacing: { before: addSep ? 90 : 50, after: 15 },
+    spacing: { before: addSep ? 80 : 45, after: 15 },
     tabStops: [
       { type: TabStopType.RIGHT, position: TabStopPosition.MAX }
     ],
     children: [
-      new TextRun({ text: company, bold: true, size: 19, font: "Times New Roman" }),
-      new TextRun({ text: " — " + role, bold: true, size: 18, font: "Times New Roman" }),
+      new TextRun({ text: title, bold: true, size: 18.5, font: "Times New Roman" }),
       new TextRun({ text: "\t" + meta, bold: true, size: 17, color: "333333", font: "Times New Roman" })
     ]
   });
@@ -141,9 +140,9 @@ function companyHeader(company, role, meta, addSep = false) {
 
 function subHeading(title) {
   return new Paragraph({
-    spacing: { before: 40, after: 10 },
+    spacing: { before: 35, after: 10 },
     children: [
-      new TextRun({ text: title, bold: true, size: 15, font: "Times New Roman", color: "4B5563" })
+      new TextRun({ text: title, bold: true, italics: true, size: 17, font: "Times New Roman", color: "333333" })
     ]
   });
 }
