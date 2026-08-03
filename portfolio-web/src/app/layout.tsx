@@ -9,9 +9,9 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  title: 'Vinay Kumar | Senior AI Engineer — Enterprise Agent Systems & Platforms',
+  title: 'Vinay Kumar — Senior AI Engineer',
   description:
-    'Senior AI Engineer portfolio of Vinay Kumar. Specializing in bespoke Agent Execution Engines, gVisor Sandboxes, Model Context Protocol (MCP) Platforms, and production GenAI solutions.',
+    'Enterprise AI Platform Engineer specializing in bespoke Agent Execution Engines, gVisor MicroVM Sandboxes, Model Context Protocol (MCP) Platforms, and production GenAI architectures.',
   keywords: [
     'Vinay Kumar',
     'Senior AI Engineer',
@@ -21,17 +21,15 @@ export const metadata: Metadata = {
     'gVisor Sandbox',
     'GenAI Engineer',
     'Infosys AI Engineer',
-    'Next.js Portfolio',
-    'Machine Learning Engineer',
   ],
   authors: [{ name: 'Vinay Kumar' }],
   creator: 'Vinay Kumar',
   openGraph: {
-    title: 'Vinay Kumar | Senior AI Engineer',
+    title: 'Vinay Kumar — Senior AI Engineer',
     description:
       'Enterprise AI Platform Engineer building foundational Agent Execution Harnesses, gVisor sandboxes, and MCP platforms.',
     url: 'https://viinai.dev',
-    siteName: 'Vinay Kumar — Senior AI Engineer Portfolio',
+    siteName: 'Vinay Kumar — Senior AI Engineer',
     locale: 'en_US',
     type: 'website',
   },
@@ -43,8 +41,8 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className={`${inter.variable} dark scroll-smooth`}>
-      <body className="min-h-screen bg-[#09090b] text-slate-100 font-sans antialiased selection:bg-indigo-600 selection:text-white">
+    <html lang="en" className={`${inter.variable} scroll-smooth`}>
+      <body className="min-h-screen bg-white text-[#1d1d1f] font-sans antialiased selection:bg-[#0071e3] selection:text-white">
         {children}
       </body>
     </html>

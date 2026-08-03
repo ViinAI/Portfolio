@@ -15,11 +15,11 @@ export default function HomePage() {
   const [isResumeModalOpen, setIsResumeModalOpen] = useState(false);
 
   return (
-    <div className="relative min-h-screen bg-[#09090b] text-slate-100 selection:bg-indigo-600 selection:text-white">
-      {/* Floating Navbar */}
+    <div className="relative min-h-screen bg-white text-[#1d1d1f] selection:bg-[#0071e3] selection:text-white">
+      {/* Apple Frosted Navbar */}
       <Navbar onOpenResumeModal={() => setIsResumeModalOpen(true)} />
 
-      {/* Main Page Content */}
+      {/* Main Content */}
       <main className="relative">
         <Hero onOpenResumeModal={() => setIsResumeModalOpen(true)} />
         <ArchitectureShowcase />
