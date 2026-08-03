@@ -1,5 +1,9 @@
 {
+  "name": "viinaiengineer",
   "version": 2,
+  "framework": "nextjs",
+  "buildCommand": "npm --prefix portfolio-web install && npm --prefix portfolio-web run build",
+  "outputDirectory": "portfolio-web/.next",
   "cleanUrls": true,
   "headers": [
     {
