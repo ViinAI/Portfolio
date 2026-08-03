@@ -22,6 +22,17 @@ export interface ProductItem {
   flowCodeSnippet?: string;
 }
 
+export interface ExperienceAchievement {
+  lead?: string;
+  description: string;
+  tags?: string[];
+}
+
+export interface ExperienceSection {
+  title: string;
+  items: ExperienceAchievement[];
+}
+
 export interface ExperienceItem {
   id: string;
   company: string;
@@ -29,11 +40,8 @@ export interface ExperienceItem {
   period: string;
   location: string;
   summary: string;
-  achievements: {
-    lead?: string;
-    description: string;
-    tags?: string[];
-  }[];
+  sections?: ExperienceSection[];
+  achievements: ExperienceAchievement[];
   techStack: string[];
 }
 
@@ -55,7 +63,7 @@ export const portfolioData = {
     githubDisplay: 'github.com/ViinAI',
     linkedin: 'https://linkedin.com/in/viinai',
     linkedinDisplay: 'linkedin.com/in/viinai',
-    bio: 'Senior AI Engineer with 5+ years of experience building enterprise-scale GenAI and multi-agent systems. Skilled in end-to-end design, optimization, and deployment of LLM-powered automation with a strong focus on governance and scalability.',
+    bio: 'Senior AI Engineer with 5.5+ years of experience in enterprise AI platform development, ML engineering, and Data Science. Designed and built foundational agent infrastructure, composed it into enterprise-grade products, and architected diverse AI solutions across multiple domains and clients at Infosys.',
     status: 'Senior AI Engineer, Infosys Topaz',
   },
 
@@ -323,69 +331,109 @@ const ragResponse = await langChainBot.query(summary);`,
       period: 'Dec 2024 – Present',
       location: 'Pune, India',
       summary:
-        'Led digital transformation for a Tier-1 telecom, architected a 16-agent pipeline, built internal agentic platforms, gVisor sandboxes, and MCP authoring tools.',
-      achievements: [
+        'Senior AI Engineer designing foundational agent infrastructure, composing it into enterprise products, and architecting multi-million dollar AI solutions.',
+      sections: [
         {
-          description:
-            'Led digital transformation for a Tier-1 telecom by designing full-stack agentic workflows; improved process efficiency 40% and helped secure a $300M AI-led transformation deal.',
-          tags: ['$300M Deal', 'Tier-1 Telecom', 'Agentic Workflows'],
+          title: 'Foundational Components',
+          items: [
+            {
+              lead: 'Execution Harness',
+              description:
+                'Designed and built a bespoke event-driven agent execution engine supporting deterministic state reconstruction, checkpointing, and long-running workflow continuity across distributed agent instances.',
+              tags: ['Event-Driven Engine', 'State Reconstruction', 'Checkpointing'],
+            },
+            {
+              lead: 'Sandbox',
+              description:
+                'Built an isolated execution sandbox leveraging gVisor for secure, reproducible execution of untrusted agent code, MCP servers, and dynamically loaded skills.',
+              tags: ['gVisor Sandbox', 'Reproducible Execution', 'Security'],
+            },
+            {
+              lead: 'MCP Platform',
+              description:
+                'Created a platform for importing, building, and hosting Model Context Protocol (MCP) servers with AI-assisted authoring, validation, and lifecycle management.',
+              tags: ['Model Context Protocol', 'AI Authoring', 'Lifecycle Management'],
+            },
+            {
+              lead: 'Skill Authoring Platform',
+              description:
+                'Built an AI-assisted Skill Authoring Platform that accelerates creation, testing, packaging, and onboarding of reusable enterprise skills through guided generation.',
+              tags: ['Skill Authoring', 'Guided Generation', 'Enterprise Skills'],
+            },
+            {
+              lead: 'User Onboarding Platform',
+              description:
+                'Developed a modular platform providing environment provisioning, access management, onboarding workflows, and operational governance across agent ecosystems.',
+              tags: ['User Onboarding', 'Environment Provisioning', 'Governance'],
+            },
+            {
+              lead: 'Workspace Execution Architecture',
+              description:
+                'Defined workspace-centric platform architecture enabling agents, skills, MCP servers, and orchestration components to collaborate within shared environments while maintaining security boundaries.',
+              tags: ['Workspace Architecture', 'Security Boundaries', 'Traceability'],
+            },
+          ],
         },
         {
-          description:
-            'Architected a production 16-agent pipeline with 5 HITL checkpoints, delivering 95% straight-through automation across complex enterprise workflows.',
-          tags: ['16-Agent Pipeline', 'HITL Checkpoints', '95% Automation'],
+          title: 'Products',
+          items: [
+            {
+              lead: 'Process-Centric Harness',
+              description:
+                'Composed foundational components into a full product enabling end-to-end process authoring, skill linking, OpenAPI spec onboarding, and autonomous execution. Deployed across multiple enterprise clients and under active go-to-market.',
+              tags: ['Process Authoring', 'OpenAPI Onboarding', 'Go-To-Market'],
+            },
+            {
+              lead: 'User-Centric Harness',
+              description:
+                'Built a multi-surface developer platform — including Web Portal (AGUI/A2UI), CLI, and VS Code Extension — exposing agent capabilities for developer and operational workflows.',
+              tags: ['Web Portal (A2UI)', 'CLI', 'VS Code Extension'],
+            },
+          ],
         },
         {
-          description:
-            'Spearheaded an internal agentic platform that standardized blueprints and governance, cutting build time 50% and driving 4x developer adoption over two quarters.',
-          tags: ['Agentic Platform', 'Standardized Blueprints', 'Governance'],
-        },
-        {
-          description:
-            'Built an LLM "compiler" (prompt planning/optimization + caching + tool orchestration) that reduced median latency 35% while maintaining quality.',
-          tags: ['LLM Compiler', 'Tool Orchestration', 'Latency Optimization'],
-        },
-        {
-          description:
-            'Delivered contract-comparison agents for 5 enterprise clients, reducing manual review time 60% and improving auditability.',
-          tags: ['Contract-Comparison', 'Auditability', 'Client Delivery'],
-        },
-        {
-          description:
-            'Owned end-to-end delivery: assessed as-is workflows, defined data models/base tables, and shipped agents from backend to frontend with evaluation and monitoring.',
-          tags: ['End-to-End Delivery', 'Data Models', 'Evaluation'],
-        },
-        {
-          description:
-            'Architected a DeepAgent-compatible sandbox platform based on gVisor, enabling secure execution environments for AI agents, MCP servers, and user-authored skills while supporting isolation, reproducibility, and enterprise governance requirements.',
-          tags: ['gVisor Sandbox', 'Isolation', 'Enterprise Governance'],
-        },
-        {
-          description:
-            'Designed and evolved a full agentic execution harness built around event-log-driven orchestration, custom context projection, state reconstruction, and long-running workflow continuity, improving observability and auditability of complex multi-agent processes.',
-          tags: ['Event-Log Harness', 'State Reconstruction', 'Observability'],
-        },
-        {
-          description:
-            'Led development of an AI-assisted Skill Authoring Platform that accelerates creation, testing, packaging, and onboarding of reusable enterprise skills through guided generation, dependency management, and deployment workflows.',
-          tags: ['Skill Authoring', 'Guided Generation', 'Enterprise Skills'],
-        },
-        {
-          description:
-            'Built an AI-assisted MCP Authoring and Onboarding Portal that simplifies creation, registration, validation, and lifecycle management of MCP servers, reducing integration effort and standardizing enterprise tool connectivity.',
-          tags: ['MCP Portal', 'Lifecycle Management', 'Tool Connectivity'],
-        },
-        {
-          description:
-            'Developed a modular User Onboarding Platform capable of operating independently or integrating with sandbox infrastructure, providing environment provisioning, access management, onboarding workflows, and operational governance across agent ecosystems.',
-          tags: ['User Onboarding', 'Environment Provisioning', 'Access Management'],
-        },
-        {
-          description:
-            'Defined platform architecture for workspace-centric agent execution, enabling agents, skills, MCP servers, and orchestration components to collaborate within shared execution environments while maintaining security boundaries and traceability.',
-          tags: ['Workspace Architecture', 'Security Boundaries', 'Traceability'],
+          title: 'Solution Architecture & Deal Wins',
+          items: [
+            {
+              lead: 'Telecom Transformation ($300M)',
+              description:
+                'Led digital transformation for a Tier-1 telecom by designing full-stack agentic workflows; improved process efficiency 40% and helped secure a $300M AI-led transformation deal.',
+              tags: ['$300M Deal', 'Tier-1 Telecom', '40% Efficiency'],
+            },
+            {
+              lead: '16-Agent Production Pipeline',
+              description:
+                'Architected a production 16-agent pipeline with 5 HITL checkpoints, delivering 95% straight-through automation across complex enterprise workflows.',
+              tags: ['16-Agent Pipeline', '5 HITL Checkpoints', '95% Automation'],
+            },
+            {
+              lead: 'Internal Agentic Platform',
+              description:
+                'Spearheaded an internal agentic platform that standardized blueprints and governance, cutting build time 50% and driving 4x developer adoption over two quarters.',
+              tags: ['Agentic Blueprints', 'Governance', '4x Adoption'],
+            },
+            {
+              lead: 'LLM "Compiler"',
+              description:
+                'Built an LLM "compiler" (prompt planning/optimization + caching + tool orchestration) that reduced median latency 35% while maintaining quality.',
+              tags: ['LLM Compiler', 'Tool Orchestration', '35% Latency Cut'],
+            },
+            {
+              lead: 'Contract-Comparison Agents',
+              description:
+                'Delivered contract-comparison agents for 5 enterprise clients, reducing manual review time 60% and improving auditability.',
+              tags: ['Contract-Comparison', '60% Time Reduction', 'Auditability'],
+            },
+            {
+              lead: 'End-to-End Delivery & Evaluation',
+              description:
+                'Owned end-to-end delivery: assessed as-is workflows, defined data models/base tables, and shipped agents from backend to frontend with evaluation and monitoring.',
+              tags: ['End-to-End Delivery', 'Data Models', 'Evaluation'],
+            },
+          ],
         },
       ],
+      achievements: [],
       techStack: [
         'Python',
         'LLM Agents',
@@ -405,28 +453,38 @@ const ragResponse = await langChainBot.query(summary);`,
       location: 'Pune, India',
       summary:
         'Built LLaMA-based summarization APIs, LLM-powered RAG chatbots, and recommendation engines to optimize warehouse efficiency and increase bundle sales.',
-      achievements: [
+      sections: [
         {
-          description:
-            'Built a LLaMA-based text-summarization service (spaCy, BART, PyTorch) to process OEM comments for inventory-delivery waivers; exposed it as a secure API and integrated with internal apps, improving warehouse efficiency and charge management.',
-          tags: ['LLaMA', 'BART', 'PyTorch', 'spaCy'],
-        },
-        {
-          description:
-            'Developed and deployed an LLM-powered chatbot (Hugging Face Transformers, LangChain, ChromaDB, Flask) for data retrieval and analysis; accelerated stakeholder Q&A and reduced manual lookups.',
-          tags: ['LangChain', 'ChromaDB', 'Hugging Face', 'Flask'],
-        },
-        {
-          description:
-            'Created an API layer to manage and update summarized comments and audit logs; enabled role-based insights from dashboards for operations teams.',
-          tags: ['API Layer', 'Audit Logs', 'Role-Based Insights'],
-        },
-        {
-          description:
-            'Designed an Accessory Recommender that suggests three add-ons using phone-accessory affinity and location-aware inventory; launched a weekly bundle recommendation that increased sales 25%.',
-          tags: ['Accessory Recommender', 'Affinity Modeling', '25% Sales Increase'],
+          title: 'Microservices & AI Engineering',
+          items: [
+            {
+              lead: 'Summarization Microservice',
+              description:
+                'Built a high-throughput text summarization service using LLaMA, BART, spaCy, and PyTorch to process OEM delivery waiver comments, integrating with warehouse ERP systems.',
+              tags: ['LLaMA', 'BART', 'PyTorch', 'spaCy'],
+            },
+            {
+              lead: 'Enterprise RAG Assistant',
+              description:
+                'Developed a conversational assistant using LangChain, ChromaDB, and Hugging Face Transformers, reducing internal document lookup time by 40%.',
+              tags: ['LangChain', 'ChromaDB', 'Hugging Face', 'Flask'],
+            },
+            {
+              lead: 'Accessory Recommender',
+              description:
+                'Designed a location-aware affinity recommendation engine matching regional inventory with purchase patterns, boosting weekly accessory bundle sales by 25%.',
+              tags: ['Accessory Recommender', 'Affinity Modeling', '25% Sales Increase'],
+            },
+            {
+              lead: 'API & Telemetry Layer',
+              description:
+                'Created an API layer to manage and update summarized comments and audit logs; enabled role-based insights from dashboards for operations teams.',
+              tags: ['API Layer', 'Audit Logs', 'Role-Based Insights'],
+            },
+          ],
         },
       ],
+      achievements: [],
       techStack: [
         'LLaMA',
         'BART',
@@ -446,18 +504,26 @@ const ragResponse = await langChainBot.query(summary);`,
       location: 'Gurgaon, India',
       summary:
         'Built Python/SQL pipelines and dashboards for operations analytics and business reporting.',
-      achievements: [
+      sections: [
         {
-          description:
-            'Built Python/SQL pipelines and dashboards for operations analytics.',
-          tags: ['Python', 'SQL', 'Pipelines', 'Dashboards'],
-        },
-        {
-          description:
-            'Performed exploratory analysis and predictive modelling (regression/classification) to support business reporting.',
-          tags: ['Predictive Modelling', 'Regression', 'Classification'],
+          title: 'Analytics & Data Pipelines',
+          items: [
+            {
+              lead: 'Analytics Pipelines',
+              description:
+                'Built Python/SQL pipelines and dashboards for operations analytics.',
+              tags: ['Python', 'SQL', 'Pipelines', 'Dashboards'],
+            },
+            {
+              lead: 'Predictive Modeling',
+              description:
+                'Performed exploratory analysis and predictive modelling (regression/classification) to support business reporting.',
+              tags: ['Predictive Modelling', 'Regression', 'Classification'],
+            },
+          ],
         },
       ],
+      achievements: [],
       techStack: ['Python', 'SQL', 'Regression', 'Classification'],
     },
   ] as ExperienceItem[],

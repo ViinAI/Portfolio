@@ -81,39 +81,87 @@ export function ExperienceTimeline() {
             </div>
           </div>
 
-          {/* Key Achievements Grid */}
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-8">
-            {activeExp.achievements.map((ach, aIdx) => (
-              <div
-                key={aIdx}
-                className="bg-white border border-black/[0.06] p-5 rounded-2xl shadow-sm hover:border-[#0071e3]/30 transition-colors flex flex-col justify-between"
-              >
-                <div>
-                  <div className="flex items-center gap-2 mb-2">
-                    <Check className="w-4 h-4 text-[#0071e3] shrink-0" />
-                    {ach.lead && (
-                      <h4 className="text-sm font-bold text-[#1d1d1f]">{ach.lead}</h4>
-                    )}
+          {/* Key Achievements & Sub-Sections */}
+          <div className="space-y-8 mb-8">
+            {activeExp.sections && activeExp.sections.length > 0 ? (
+              activeExp.sections.map((section, sIdx) => (
+                <div key={sIdx} className="space-y-3.5">
+                  <div className="flex items-center gap-2 border-b border-black/[0.04] pb-2">
+                    <span className="text-xs font-bold uppercase tracking-wider text-[#0071e3]">
+                      {section.title}
+                    </span>
                   </div>
-                  <p className="text-xs sm:text-sm text-[#6e6e73] leading-relaxed pl-6">
-                    {ach.description}
-                  </p>
-                </div>
 
-                {ach.tags && ach.tags.length > 0 && (
-                  <div className="flex flex-wrap gap-1.5 mt-4 pt-3 border-t border-black/[0.04] pl-6">
-                    {ach.tags.map((tag, tIdx) => (
-                      <span
-                        key={tIdx}
-                        className="text-[10px] font-medium px-2 py-0.5 rounded-md bg-[#ffffff] text-[#1d1d1f] border border-black/[0.04]"
+                  <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                    {section.items.map((ach, aIdx) => (
+                      <div
+                        key={aIdx}
+                        className="bg-white border border-black/[0.06] p-5 rounded-2xl shadow-sm hover:border-[#0071e3]/30 transition-colors flex flex-col justify-between"
                       >
-                        {tag}
-                      </span>
+                        <div>
+                          <div className="flex items-center gap-2 mb-2">
+                            <Check className="w-4 h-4 text-[#0071e3] shrink-0" />
+                            {ach.lead && (
+                              <h4 className="text-sm font-bold text-[#1d1d1f]">{ach.lead}</h4>
+                            )}
+                          </div>
+                          <p className="text-xs sm:text-sm text-[#6e6e73] leading-relaxed pl-6">
+                            {ach.description}
+                          </p>
+                        </div>
+
+                        {ach.tags && ach.tags.length > 0 && (
+                          <div className="flex flex-wrap gap-1.5 mt-4 pt-3 border-t border-black/[0.04] pl-6">
+                            {ach.tags.map((tag, tIdx) => (
+                              <span
+                                key={tIdx}
+                                className="text-[10px] font-medium px-2 py-0.5 rounded-md bg-[#ffffff] text-[#1d1d1f] border border-black/[0.04]"
+                              >
+                                {tag}
+                              </span>
+                            ))}
+                          </div>
+                        )}
+                      </div>
                     ))}
                   </div>
-                )}
+                </div>
+              ))
+            ) : (
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                {activeExp.achievements.map((ach, aIdx) => (
+                  <div
+                    key={aIdx}
+                    className="bg-white border border-black/[0.06] p-5 rounded-2xl shadow-sm hover:border-[#0071e3]/30 transition-colors flex flex-col justify-between"
+                  >
+                    <div>
+                      <div className="flex items-center gap-2 mb-2">
+                        <Check className="w-4 h-4 text-[#0071e3] shrink-0" />
+                        {ach.lead && (
+                          <h4 className="text-sm font-bold text-[#1d1d1f]">{ach.lead}</h4>
+                        )}
+                      </div>
+                      <p className="text-xs sm:text-sm text-[#6e6e73] leading-relaxed pl-6">
+                        {ach.description}
+                      </p>
+                    </div>
+
+                    {ach.tags && ach.tags.length > 0 && (
+                      <div className="flex flex-wrap gap-1.5 mt-4 pt-3 border-t border-black/[0.04] pl-6">
+                        {ach.tags.map((tag, tIdx) => (
+                          <span
+                            key={tIdx}
+                            className="text-[10px] font-medium px-2 py-0.5 rounded-md bg-[#ffffff] text-[#1d1d1f] border border-black/[0.04]"
+                          >
+                            {tag}
+                          </span>
+                        ))}
+                      </div>
+                    )}
+                  </div>
+                ))}
               </div>
-            ))}
+            )}
           </div>
 
           {/* Tech Stack Bar */}
