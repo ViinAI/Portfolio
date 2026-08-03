@@ -116,8 +116,8 @@ export function Navbar({ onOpenResumeModal }: NavbarProps) {
 
       {/* Mobile Dropdown Menu */}
       {mobileMenuOpen && (
-        <div className="md:hidden px-4 pt-2 pb-6 bg-white border-t border-black/[0.08] shadow-lg animate-in fade-in">
-          <div className="flex flex-col gap-1 text-[#1d1d1f] text-sm">
+        <div className="md:hidden px-4 pt-3 pb-6 bg-white border-t border-black/[0.08] shadow-2xl animate-in fade-in slide-in-from-top-2">
+          <div className="flex flex-col gap-1.5 text-[#1d1d1f]">
             {navLinks.map((link) => {
               const isActive = pathname === link.href;
               return (
@@ -125,41 +125,43 @@ export function Navbar({ onOpenResumeModal }: NavbarProps) {
                   key={link.name}
                   href={link.href}
                   onClick={() => setMobileMenuOpen(false)}
-                  className={`px-3 py-3 border-b border-black/[0.04] transition-colors ${
-                    isActive ? 'font-semibold bg-[#ffffff]' : 'hover:bg-[#f5f5f7]'
+                  className={`px-4 py-3 rounded-xl transition-all text-sm font-medium ${
+                    isActive
+                      ? 'font-semibold text-[#0071e3] bg-[#f5f5f7]'
+                      : 'text-[#1d1d1f] hover:bg-[#f5f5f7]'
                   }`}
                 >
                   {link.name}
                 </Link>
               );
             })}
-            <div className="mt-3 flex flex-col gap-2 px-3">
+            <div className="mt-4 pt-3 border-t border-black/[0.06] flex flex-col gap-2">
               <button
                 onClick={() => {
                   setMobileMenuOpen(false);
                   onOpenResumeModal();
                 }}
-                className="flex items-center justify-center gap-2 w-full py-2.5 rounded-lg bg-[#ffffff] text-xs font-semibold text-[#1d1d1f]"
+                className="w-full py-3 rounded-xl bg-white border border-black/[0.08] text-xs font-semibold text-[#1d1d1f] flex items-center justify-center gap-2 shadow-sm"
               >
                 <FileText className="w-4 h-4 text-[#0071e3]" />
-                View Live Resume
+                Live CV
               </button>
-              <div className="grid grid-cols-2 gap-2 mt-2">
+              <div className="grid grid-cols-2 gap-2 mt-1">
                 <a
                   href={portfolioData.deliverables.pdf}
                   download="Vinay_Kumar_CV.pdf"
-                  className="flex items-center justify-center gap-1.5 py-2.5 rounded-lg bg-[#0071e3] text-xs font-semibold text-white"
+                  className="flex items-center justify-center gap-1.5 py-2.5 rounded-xl bg-[#0071e3] text-xs font-semibold text-white shadow-sm"
                 >
                   <Download className="w-3.5 h-3.5" />
-                  PDF Resume
+                  PDF CV
                 </a>
                 <a
                   href={portfolioData.deliverables.docx}
                   download="Vinay_Kumar_CV.docx"
-                  className="flex items-center justify-center gap-1.5 py-2.5 rounded-lg bg-[#ffffff] border border-black/[0.08] text-xs font-semibold text-[#1d1d1f]"
+                  className="flex items-center justify-center gap-1.5 py-2.5 rounded-xl bg-white border border-black/[0.08] text-xs font-semibold text-[#1d1d1f]"
                 >
                   <Download className="w-3.5 h-3.5" />
-                  Word (DOCX)
+                  DOCX
                 </a>
               </div>
             </div>

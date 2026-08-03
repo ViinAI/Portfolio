@@ -1,0 +1,74 @@
+
+=======================================================
+DOCUMENT: Vinay_CV_Project_Updates.docx
+=======================================================
+
+CV Update – New Strategic Projects (Draft Content)
+Architected a DeepAgent-compatible sandbox platform based on gVisor, enabling secure execution environments for AI agents, MCP servers, and user-authored skills while supporting isolation, reproducibility, and enterprise governance requirements.
+Designed and evolved a full agentic execution harness built around event-log-driven orchestration, custom context projection, state reconstruction, and long-running workflow continuity, improving observability and auditability of complex multi-agent processes.
+Led development of an AI-assisted Skill Authoring Platform that accelerates creation, testing, packaging, and onboarding of reusable enterprise skills through guided generation, dependency management, and deployment workflows.
+Built an AI-assisted MCP Authoring and Onboarding Portal that simplifies creation, registration, validation, and lifecycle management of MCP servers, reducing integration effort and standardizing enterprise tool connectivity.
+Developed a modular User Onboarding Platform capable of operating independently or integrating with sandbox infrastructure, providing environment provisioning, access management, onboarding workflows, and operational governance across agent ecosystems.
+Defined platform architecture for workspace-centric agent execution, enabling agents, skills, MCP servers, and orchestration components to collaborate within shared execution environments while maintaining security boundaries and traceability.
+
+=======================================================
+DOCUMENT: vinay_cv_updated.docx
+=======================================================
+
+Vinay Kumar
+Senior AI Engineer, Infosys Topaz
+Pune    9992394789    viinaimadotra@gmail.com
+Professional Summary
+Senior AI Engineer with 4.3 years of experience building enterprise-scale GenAI and multi-agent systems. Skilled in end-to-end design, optimization, and deployment of LLM-powered automation with a strong focus on governance and scalability.
+Professional Experience
+Infosys — Senior Data Scientist / AI Engineer
+Dec 2024 – Present
+Led digital transformation for a Tier‑1 telecom by designing full‑stack agentic workflows; improved process efficiency 40% and helped secure a $300M AI‑led transformation deal.
+Architected a production 16‑agent pipeline with 5 HITL checkpoints, delivering 95% straight‑through automation across complex enterprise workflows.
+Spearheaded an internal agentic platform that standardized blueprints and governance, cutting build time 50% and driving 4× developer adoption over two quarters.
+Built an LLM “compiler” (prompt planning/optimization + caching + tool orchestration) that reduced median latency 35% while maintaining quality.
+Delivered contract‑comparison agents for 5 enterprise clients, reducing manual review time 60% and improving auditability.
+Owned end‑to‑end delivery: assessed as‑is workflows, defined data models/base tables, and shipped agents from backend to frontend with evaluation and monitoring.
+Xcaliber Infotech — Data Scientist Dec 2022 – Dec 2024, Pune
+Built a LLaMA‑based text‑summarization service (spaCy, BART, PyTorch) to process OEM comments for inventory‑delivery waivers; exposed it as a secure API and integrated with internal apps, improving warehouse efficiency and charge management.
+Developed and deployed an LLM‑powered chatbot (Hugging Face Transformers, LangChain, ChromaDB, Flask) for data retrieval and analysis; accelerated stakeholder Q&A and reduced manual lookups.
+Created an API layer to manage and update summarized comments and audit logs; enabled role‑based insights from dashboards for operations teams.
+Designed an Accessory Recommender that suggests three add‑ons using phone‑accessory affinity and location‑aware inventory; launched a weekly bundle recommendation that increased sales 25%.
+Concentrix India — Data Analyst Oct 2015 – Apr 2017, Gurgaon
+Built Python/SQL pipelines and dashboards for operations analytics;
+Performed exploratory analysis and predictive modelling (regression/classification) to support business reporting.
+Skills
+Core Skills: Python (NumPy, pandas, Matplotlib, RegEx), SQL, Flask, Git/GitHubGenAI & NLP: Transformers (BERT, RoBERTa, LLaMA), LangChain, Hugging Face, ChromaDB, spaCy, NLTK, Word2Vec, TF-IDF, NERMachine Learning: Scikit-learn (Regression, Classification, Decision Trees, Random Forest, KNN, SVM, AdaBoost, K-Means)Deep Learning: PyTorch, TensorFlow, Keras; ANN, CNN, RNN, LSTM; Encoders/DecodersTools & Platforms: AWS, APIs, Dashboarding
+Education
+PG‑Diploma in Artificial Intelligence (PGDAI) — CDAC, Pune, 2022B.Tech — JIET, Jind, 2014
+
+=======================================================
+DOCUMENT: vinay_cv.docx
+=======================================================
+
+Vinay Kumar
+Senior AI Engineer, Infosys Topaz
+Pune    9992394789    viinaimadotra@gmail.com
+Professional Summary
+Senior AI Engineer with 5+ years of experience building enterprise-scale GenAI and multi-agent systems. Skilled in end-to-end design, optimization, and deployment of LLM-powered automation with a strong focus on governance and scalability.
+Professional Experience
+Infosys — Senior AI Engineer
+Dec 2024 – Present
+Led digital transformation for a Tier‑1 telecom by designing full‑stack agentic workflows; improved process efficiency 40% and helped secure a $300M AI‑led transformation deal.
+Architected a production 16‑agent pipeline with 5 HITL checkpoints, delivering 95% straight‑through automation across complex enterprise workflows.
+Spearheaded an internal agentic platform that standardized blueprints and governance, cutting build time 50% and driving 4× developer adoption over two quarters.
+Built an LLM “compiler” (prompt planning/optimization + caching + tool orchestration) that reduced median latency 35% while maintaining quality.
+Delivered contract‑comparison agents for 5 enterprise clients, reducing manual review time 60% and improving auditability.
+Owned end‑to‑end delivery: assessed as‑is workflows, defined data models/base tables, and shipped agents from backend to frontend with evaluation and monitoring.
+Xcaliber Infotech — Data Scientist Dec 2022 – Dec 2024, Pune
+Built a LLaMA‑based text‑summarization service (spaCy, BART, PyTorch) to process OEM comments for inventory‑delivery waivers; exposed it as a secure API and integrated with internal apps, improving warehouse efficiency and charge management.
+Developed and deployed an LLM‑powered chatbot (Hugging Face Transformers, LangChain, ChromaDB, Flask) for data retrieval and analysis; accelerated stakeholder Q&A and reduced manual lookups.
+Created an API layer to manage and update summarized comments and audit logs; enabled role‑based insights from dashboards for operations teams.
+Designed an Accessory Recommender that suggests three add‑ons using phone‑accessory affinity and location‑aware inventory; launched a weekly bundle recommendation that increased sales 25%.
+Concentrix India — Data Analyst Oct 2015 – Apr 2017, Gurgaon
+Built Python/SQL pipelines and dashboards for operations analytics;
+Performed exploratory analysis and predictive modelling (regression/classification) to support business reporting.
+Skills
+Programming & Data: Python (NumPy, pandas, Matplotlib, RegEx), SQL, Flask, Git/GitHub, AWSMachine Learning: Scikit‑learn (Linear/Logistic Regression, Decision Trees, Random Forest, KNN, SVM, AdaBoost, K‑Means)Deep Learning: TensorFlow, Keras, PyTorch; ANN, CNN, RNN, LSTM; Encoders/DecodersNLP & GenAI: NLTK, spaCy, wordcloud, Word2Vec, TF‑IDF, NER; Transformers (BERT, RoBERTa, LLaMA); LangChain, ChromaDB, Hugging Face
+Education
+PG‑Diploma in Artificial Intelligence (PGDAI) — CDAC, Pune, 2022B.Tech — JIET, Jind, 2014

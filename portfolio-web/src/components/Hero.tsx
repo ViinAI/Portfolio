@@ -13,11 +13,19 @@ import { GithubIcon, LinkedinIcon } from './Icons';
 import { portfolioData } from '../data/portfolioData';
 
 interface HeroProps {
-  onOpenResumeModal: () => void;
+  onOpenResumeModal?: () => void;
 }
 
 export function Hero({ onOpenResumeModal }: HeroProps) {
   const { personal, stats } = portfolioData;
+
+  const handleOpenResume = () => {
+    if (onOpenResumeModal) {
+      onOpenResumeModal();
+    } else {
+      window.open(portfolioData.deliverables.html, '_blank');
+    }
+  };
 
   return (
     <section id="introduction" className="relative pt-32 pb-20 md:pt-40 md:pb-28 bg-white overflow-hidden">
@@ -55,7 +63,7 @@ export function Hero({ onOpenResumeModal }: HeroProps) {
             </a>
 
             <button
-              onClick={onOpenResumeModal}
+              onClick={handleOpenResume}
               className="flex items-center gap-2 px-5 py-3 rounded-full font-medium text-sm text-[#1d1d1f] bg-[#ffffff] hover:bg-[#e8e8ed] border border-black/[0.06] transition-all"
             >
               <FileText className="w-4 h-4 text-[#0071e3]" />

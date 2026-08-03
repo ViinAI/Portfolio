@@ -4,6 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Vinay Kumar - Senior AI Engineer</title>
+  
   <style>
 @font-face {
       font-family: 'EB Garamond';
@@ -52,22 +53,20 @@
       background: #f4f4f6;
       font-family: "EB Garamond", "Times New Roman", Times, serif;
       color: #111;
-      padding: 16px 10px 40px;
+      line-height: 1.28;
+      font-size: 9.6pt;
+      padding: 15px 10px;
       display: flex;
       flex-direction: column;
       align-items: center;
-      min-height: 100vh;
     }
-
-    /* Top Actions Toolbar */
-    .top-toolbar {
+    .actions-bar {
       margin-bottom: 14px;
       display: flex;
-      align-items: center;
       gap: 12px;
     }
     .btn {
-      padding: 7px 16px;
+      padding: 8px 16px;
       font-family: system-ui, sans-serif;
       font-size: 13px;
       font-weight: 600;
@@ -77,107 +76,84 @@
       border-radius: 6px;
       cursor: pointer;
       text-decoration: none;
-      box-shadow: 0 2px 5px rgba(0,0,0,0.12);
+      box-shadow: 0 2px 4px rgba(0,0,0,0.12);
       display: inline-flex;
       align-items: center;
       gap: 6px;
-      transition: background 0.15s ease;
     }
     .btn:hover { background: #0052a3; }
-    .btn-secondary { background: #475569; }
-    .btn-secondary:hover { background: #334155; }
-
-    /* The Resume Sheet */
+    .btn-secondary { background: #4b5563; }
+    .btn-secondary:hover { background: #374151; }
     .page {
       background: #fff;
       width: 210mm;
       min-height: 297mm;
-      padding: 5.5mm 12mm;
+      padding: 7.5mm 12mm;
       box-shadow: 0 4px 14px rgba(0,0,0,0.08);
       page-break-inside: avoid;
-      font-family: "EB Garamond", "Times New Roman", Times, serif;
-      color: #111;
     }
-
-    /* 1. Header */
-    header { text-align: center; margin-bottom: 3px; }
-    h1 {
-      font-size: 24pt;
-      font-weight: 700;
-      letter-spacing: -0.2px;
-      margin-bottom: 1px;
-    }
-    .subtitle {
-      font-size: 12pt;
-      font-weight: 600;
-      color: #222;
-      margin-bottom: 2px;
-    }
-    .contact-line {
-      font-size: 10pt;
-      color: #333;
-    }
-    .contact-line a {
-      color: #0000ee;
-      text-decoration: underline;
-    }
+    header { text-align: center; margin-bottom: 5.5px; }
+    h1 { font-size: 22pt; font-weight: 700; letter-spacing: -0.3px; margin-bottom: 1px; }
+    .subtitle { font-size: 11.3pt; font-weight: 600; color: #222; margin-bottom: 2px; }
+    .contact-line { font-size: 9.3pt; color: #333; }
+    .contact-line a { color: #0000ee; text-decoration: underline; }
     .divider { margin: 0 4px; }
-
-    section {
-      margin-bottom: 4px;
-      page-break-inside: avoid;
-    }
-
-    /* 2. SECTION HEADINGS: 14pt */
+    section { margin-bottom: 6px; page-break-inside: avoid; }
     h2 {
-      font-size: 14pt;
+      font-size: 10.6pt;
       font-weight: 700;
-      border-bottom: 1.2px solid #111;
+      border-bottom: 1px solid #111;
       padding-bottom: 1.5px;
-      margin-top: 4px;
-      margin-bottom: 3px;
-      letter-spacing: 0.1px;
+      margin-bottom: 3.5px;
     }
-
-    /* 3. ORGANIZATION HEADINGS: 12pt */
+    .summary-p {
+      text-align: justify;
+      margin-bottom: 4.5px;
+      font-size: 9.6pt;
+      line-height: 1.28;
+    }
     .company-block {
-      margin-bottom: 0px;
+      margin-bottom: 3px;
     }
     .company-block-sep {
-      margin-top: 12px;
-      margin-bottom: 2px;
+      margin-top: 6px;
+      padding-top: 3px;
     }
     .job-header {
       display: flex;
       justify-content: space-between;
       align-items: baseline;
-      font-weight: 700;
-      margin-top: 2px;
+      margin-top: 4.5px;
       margin-bottom: 2px;
-      font-size: 12pt;
+    }
+    .company-name {
+      font-size: 10.2pt;
+      font-weight: 700;
+      color: #000;
+    }
+    .company-sub {
+      font-size: 8.8pt;
+      color: #444;
+      font-weight: 400;
+    }
+    .role-title {
+      font-size: 9.6pt;
+      font-weight: 600;
+      color: #222;
     }
     .job-meta {
-      font-size: 10pt;
-      color: #333;
+      font-size: 9.3pt;
       font-weight: 600;
+      color: #333;
     }
-
-    /* 4. INTERNAL SUB-HEADINGS: 10pt */
     .sub-heading {
       font-weight: 700;
-      font-size: 10pt;
-      font-style: italic;
-      color: #222;
-      margin-top: 3px;
-      margin-bottom: 1px;
-    }
-
-    /* 5. BODY TEXT & BULLETS: 10pt */
-    .summary-p {
-      text-align: justify;
-      margin-bottom: 3px;
-      font-size: 10pt;
-      line-height: 1.27;
+      font-size: 8.4pt;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      color: #4b5563;
+      margin-top: 3.5px;
+      margin-bottom: 1.5px;
     }
     ul {
       list-style-type: disc;
@@ -185,31 +161,35 @@
       margin-bottom: 2px;
     }
     li {
-      margin-bottom: 1.8px;
+      margin-bottom: 2px;
       text-align: justify;
-      font-size: 10pt;
-      line-height: 1.26;
+      font-size: 9.6pt;
+      line-height: 1.27;
     }
     .skills-section li {
-      margin-bottom: 2px;
-      font-size: 10pt;
+      margin-bottom: 2.2px;
     }
     .education-item {
-      margin-bottom: 1.5px;
-      font-size: 10pt;
+      margin-bottom: 1px;
+      font-size: 9.6pt;
     }
-
     @media print {
       body { background: transparent; padding: 0; }
-      .top-toolbar { display: none !important; }
-      .page { width: 100%; box-shadow: none; padding: 5.5mm 10mm; margin: 0; min-height: auto; }
+      .actions-bar { display: none; }
+      .page { width: 100%; box-shadow: none; padding: 7.5mm 10mm; margin: 0; min-height: auto; }
       @page { size: A4; margin: 0; }
     }
-  </style>
+  
+</style>
 </head>
 <body>
 
-  <div class="page" id="resume-page">
+  <div class="actions-bar">
+    <a href="Vinay_Kumar_CV.pdf" download="Vinay_Kumar_CV.pdf" class="btn">⬇️ Download PDF</a>
+    <a href="Vinay_Kumar_CV.docx" download="Vinay_Kumar_CV.docx" class="btn btn-secondary">⬇️ Download Word (.docx)</a>
+  </div>
+
+  <div class="page">
     <header>
       <h1>Vinay Kumar</h1>
       <div class="subtitle">Senior AI Engineer</div>
@@ -226,13 +206,14 @@
       </p>
     </section>
 
+    
     <section>
       <h2>Professional Experience</h2>
 
       <div class="company-block">
         <div class="job-header">
-          <span>Infosys — Senior AI Engineer</span>
-          <span class="job-meta">Dec 2024 – Present</span>
+          <div><strong class="company-name">Infosys</strong> <span class="role-title">— Senior AI Engineer</span></div>
+          <div class="job-meta">Dec 2024 – Present</div>
         </div>
 
         <div class="sub-heading">Foundational Components</div>
@@ -252,12 +233,17 @@
         <ul>
           <li>Independently architected diverse AI solutions — including a $300M Telecom transformation, Digital Tutor platform, and CMDB platform — driving multiple deal wins for Infosys.</li>
         </ul>
+
+        <div class="sub-heading">Technical</div>
+        <ul>
+          <li><strong>LLM Compiler:</strong> Built a proprietary LLM execution optimizer with dynamic prompt planning and semantic caching, reducing median query latency by 35%.</li>
+        </ul>
       </div>
 
       <div class="company-block company-block-sep">
         <div class="job-header">
-          <span>Xcaliber Infotech — AI Engineer</span>
-          <span class="job-meta">Dec 2022 – Dec 2024, Pune</span>
+          <div><strong class="company-name">Xcaliber Infotech</strong> <span class="company-sub">(A Phoenix Group Company)</span> <span class="role-title">— Data Scientist / AI-ML Engineer</span></div>
+          <div class="job-meta">Dec 2022 – Dec 2024 | Pune</div>
         </div>
         <ul>
           <li><strong>Summarization Microservice:</strong> Built a high-throughput text summarization service using LLaMA, BART, spaCy, and PyTorch to process OEM delivery waiver comments, integrating with warehouse ERP systems.</li>
@@ -269,8 +255,8 @@
 
       <div class="company-block company-block-sep">
         <div class="job-header">
-          <span>Concentrix India — Data Analyst</span>
-          <span class="job-meta">Oct 2015 – Apr 2017, Gurgaon</span>
+          <div><strong class="company-name">Concentrix India</strong> <span class="role-title">— Data Analyst</span></div>
+          <div class="job-meta">Oct 2015 – Apr 2017 | Gurgaon</div>
         </div>
         <ul>
           <li><strong>Analytics Pipelines:</strong> Built automated Python and SQL ETL pipelines and executive reporting dashboards.</li>
@@ -278,6 +264,7 @@
         </ul>
       </div>
     </section>
+  
 
     <section>
       <h2>Skills</h2>
@@ -291,12 +278,8 @@
 
     <section>
       <h2>Education</h2>
-      <div class="education-item">
-        <strong>PG-Diploma in Artificial Intelligence (PGDAI)</strong> — C-DAC, Pune, 2022
-      </div>
-      <div class="education-item">
-        <strong>B.Tech in Mechanical Engineering</strong> — JIET, Jind, 2014
-      </div>
+      <div class="education-item"><strong>PG-Diploma in Artificial Intelligence (PGDAI)</strong> — C-DAC, Pune, 2022</div>
+      <div class="education-item"><strong>B.Tech in Mechanical Engineering</strong> — JIET, Jind, 2014</div>
     </section>
   </div>
 

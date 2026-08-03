@@ -318,8 +318,8 @@ const ragResponse = await langChainBot.query(summary);`,
   experience: [
     {
       id: 'infosys',
-      company: 'Infosys',
-      role: 'Senior Data Scientist / AI Engineer',
+      company: 'Infosys Topaz',
+      role: 'Senior AI Engineer',
       period: 'Dec 2024 – Present',
       location: 'Pune, India',
       summary:
