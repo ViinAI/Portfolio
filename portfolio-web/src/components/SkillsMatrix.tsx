@@ -10,15 +10,15 @@ export function SkillsMatrix() {
   const getCategoryIcon = (idx: number) => {
     switch (idx) {
       case 0:
-        return <Cpu className="w-4 h-4 text-[#0071e3]" />;
+        return <Cpu className="w-5 h-5 text-[#0071e3]" />;
       case 1:
-        return <Sparkles className="w-4 h-4 text-[#0071e3]" />;
+        return <Sparkles className="w-5 h-5 text-[#0071e3]" />;
       case 2:
-        return <Database className="w-4 h-4 text-[#0071e3]" />;
+        return <Database className="w-5 h-5 text-[#0071e3]" />;
       case 3:
-        return <Terminal className="w-4 h-4 text-[#0071e3]" />;
+        return <Terminal className="w-5 h-5 text-[#0071e3]" />;
       default:
-        return <Wrench className="w-4 h-4 text-[#0071e3]" />;
+        return <Wrench className="w-5 h-5 text-[#0071e3]" />;
     }
   };
 
@@ -26,7 +26,7 @@ export function SkillsMatrix() {
     <section id="skills" className="py-24 bg-white border-t border-black/[0.06]">
       <div className="max-w-6xl mx-auto px-4 sm:px-6">
         {/* Section Header */}
-        <div className="flex flex-col items-center text-center max-w-3xl mx-auto mb-16">
+        <div className="flex flex-col items-center text-center max-w-3xl mx-auto mb-14">
           <span className="text-xs font-semibold uppercase tracking-wider text-[#0071e3] mb-3">
             Technical Stack
           </span>
@@ -39,17 +39,17 @@ export function SkillsMatrix() {
           </p>
         </div>
 
-        {/* Skill Category Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-5 sm:gap-6">
+        {/* 4-Domain Bento Grid */}
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
           {skillCategories.map((category, idx) => (
             <div
               key={idx}
-              className="apple-card p-6 sm:p-8 rounded-2xl flex flex-col justify-between"
+              className="bg-[#ffffff] border border-black/[0.06] p-7 sm:p-8 rounded-3xl shadow-[0_4px_20px_rgba(0,0,0,0.02)] flex flex-col justify-between hover:shadow-[0_8px_30px_rgba(0,0,0,0.04)] transition-all"
             >
               <div>
                 {/* Category Header */}
-                <div className="flex items-center gap-3 mb-3">
-                  <div className="p-2 rounded-xl bg-white border border-black/[0.06] shadow-sm">
+                <div className="flex items-center gap-3 mb-3 pb-3 border-b border-black/[0.04]">
+                  <div className="p-2.5 rounded-2xl bg-white border border-black/[0.06] shadow-sm">
                     {getCategoryIcon(idx)}
                   </div>
                   <div>
@@ -61,14 +61,14 @@ export function SkillsMatrix() {
                 </div>
 
                 {/* Skills Badges Grid */}
-                <div className="flex flex-wrap gap-2 pt-4">
+                <div className="flex flex-wrap gap-2 pt-3">
                   {category.skills.map((skill, sIdx) => (
                     <div
                       key={sIdx}
-                      className={`inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full text-xs font-medium transition-all ${
+                      className={`inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-xl text-xs font-medium transition-all ${
                         skill.highlight
                           ? 'bg-white text-[#1d1d1f] border border-black/[0.08] shadow-sm font-semibold'
-                          : 'bg-black/[0.03] text-[#6e6e73]'
+                          : 'bg-white/60 text-[#6e6e73] border border-black/[0.03]'
                       }`}
                     >
                       {skill.highlight && (
@@ -81,9 +81,9 @@ export function SkillsMatrix() {
               </div>
 
               {/* Category Footer */}
-              <div className="mt-6 pt-4 border-t border-black/[0.04] flex items-center justify-between text-[11px] text-[#86868b]">
+              <div className="mt-6 pt-4 border-t border-black/[0.04] flex items-center justify-between text-xs text-[#86868b]">
                 <span>{category.skills.length} core competencies</span>
-                <span className="text-[#0071e3] font-medium">Production Verified</span>
+                <span className="text-[#0071e3] font-semibold">Production Verified</span>
               </div>
             </div>
           ))}

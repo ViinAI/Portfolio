@@ -35,7 +35,7 @@ export function ContactSection() {
         {/* Contact Bento */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
           {/* Direct Details Card */}
-          <div className="apple-card p-6 sm:p-8 rounded-2xl flex flex-col justify-between">
+          <div className="bg-[#ffffff] border border-black/[0.06] p-7 sm:p-8 rounded-3xl flex flex-col justify-between shadow-[0_4px_20px_rgba(0,0,0,0.02)]">
             <div>
               <h3 className="text-lg sm:text-xl font-bold text-[#1d1d1f] tracking-tight mb-2">
                 Direct Contact
@@ -46,16 +46,16 @@ export function ContactSection() {
 
               <div className="space-y-3">
                 {/* Email Copy Card */}
-                <div className="p-3.5 rounded-xl bg-white border border-black/[0.06] flex items-center justify-between shadow-sm">
+                <div className="p-4 rounded-2xl bg-white border border-black/[0.06] flex items-center justify-between shadow-sm">
                   <div className="flex items-center gap-3">
-                    <div className="p-2 rounded-lg bg-[#f5f5f7] text-[#0071e3]">
+                    <div className="p-2.5 rounded-xl bg-[#ffffff] text-[#0071e3]">
                       <Mail className="w-4 h-4" />
                     </div>
                     <div>
                       <div className="text-[11px] text-[#86868b]">Email</div>
                       <a
                         href={`mailto:${personal.email}`}
-                        className="text-xs sm:text-sm font-medium text-[#1d1d1f] hover:text-[#0071e3] transition-colors"
+                        className="text-xs sm:text-sm font-semibold text-[#1d1d1f] hover:text-[#0071e3] transition-colors"
                       >
                         {personal.email}
                       </a>
@@ -63,7 +63,7 @@ export function ContactSection() {
                   </div>
                   <button
                     onClick={handleCopyEmail}
-                    className="p-2 rounded-lg bg-[#f5f5f7] hover:bg-[#e8e8ed] text-[#1d1d1f] transition-colors"
+                    className="p-2.5 rounded-xl bg-[#ffffff] hover:bg-[#e8e8ed] text-[#1d1d1f] transition-colors"
                     title="Copy email"
                   >
                     {copied ? (
@@ -75,15 +75,15 @@ export function ContactSection() {
                 </div>
 
                 {/* Phone */}
-                <div className="p-3.5 rounded-xl bg-white border border-black/[0.06] flex items-center gap-3 shadow-sm">
-                  <div className="p-2 rounded-lg bg-[#f5f5f7] text-[#0071e3]">
+                <div className="p-4 rounded-2xl bg-white border border-black/[0.06] flex items-center gap-3 shadow-sm">
+                  <div className="p-2.5 rounded-xl bg-[#ffffff] text-[#0071e3]">
                     <Phone className="w-4 h-4" />
                   </div>
                   <div>
                     <div className="text-[11px] text-[#86868b]">Phone</div>
                     <a
                       href={`tel:${personal.phone.replace(/[^0-9+]/g, '')}`}
-                      className="text-xs sm:text-sm font-medium text-[#1d1d1f] hover:text-[#0071e3] transition-colors"
+                      className="text-xs sm:text-sm font-semibold text-[#1d1d1f] hover:text-[#0071e3] transition-colors"
                     >
                       {personal.phone}
                     </a>
@@ -91,13 +91,13 @@ export function ContactSection() {
                 </div>
 
                 {/* Location */}
-                <div className="p-3.5 rounded-xl bg-white border border-black/[0.06] flex items-center gap-3 shadow-sm">
-                  <div className="p-2 rounded-lg bg-[#f5f5f7] text-[#0071e3]">
+                <div className="p-4 rounded-2xl bg-white border border-black/[0.06] flex items-center gap-3 shadow-sm">
+                  <div className="p-2.5 rounded-xl bg-[#ffffff] text-[#0071e3]">
                     <MapPin className="w-4 h-4" />
                   </div>
                   <div>
                     <div className="text-[11px] text-[#86868b]">Location</div>
-                    <span className="text-xs sm:text-sm font-medium text-[#1d1d1f]">
+                    <span className="text-xs sm:text-sm font-semibold text-[#1d1d1f]">
                       {personal.location}
                     </span>
                   </div>
@@ -111,47 +111,47 @@ export function ContactSection() {
                 href={personal.linkedin}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="flex items-center justify-center gap-2 py-2.5 rounded-full bg-white border border-black/[0.06] hover:bg-[#f5f5f7] text-xs font-medium text-[#1d1d1f] transition-all shadow-sm"
+                className="flex items-center justify-center gap-2 py-3 rounded-full bg-white border border-black/[0.06] hover:bg-[#f5f5f7] text-xs font-semibold text-[#1d1d1f] transition-all shadow-sm"
               >
-                <LinkedinIcon className="w-3.5 h-3.5 text-[#0071e3]" />
+                <LinkedinIcon className="w-4 h-4 text-[#0071e3]" />
                 <span>LinkedIn</span>
-                <ArrowUpRight className="w-3 h-3 text-[#86868b]" />
+                <ArrowUpRight className="w-3.5 h-3.5 text-[#86868b]" />
               </a>
               <a
                 href={personal.github}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="flex items-center justify-center gap-2 py-2.5 rounded-full bg-white border border-black/[0.06] hover:bg-[#f5f5f7] text-xs font-medium text-[#1d1d1f] transition-all shadow-sm"
+                className="flex items-center justify-center gap-2 py-3 rounded-full bg-white border border-black/[0.06] hover:bg-[#f5f5f7] text-xs font-semibold text-[#1d1d1f] transition-all shadow-sm"
               >
-                <GithubIcon className="w-3.5 h-3.5 text-[#1d1d1f]" />
+                <GithubIcon className="w-4 h-4 text-[#1d1d1f]" />
                 <span>GitHub</span>
-                <ArrowUpRight className="w-3 h-3 text-[#86868b]" />
+                <ArrowUpRight className="w-3.5 h-3.5 text-[#86868b]" />
               </a>
             </div>
           </div>
 
           {/* Action Message Card */}
-          <div className="apple-card p-6 sm:p-8 rounded-2xl flex flex-col justify-between">
+          <div className="bg-[#ffffff] border border-black/[0.06] p-7 sm:p-8 rounded-3xl flex flex-col justify-between shadow-[0_4px_20px_rgba(0,0,0,0.02)]">
             <div>
               <h3 className="text-lg sm:text-xl font-bold text-[#1d1d1f] tracking-tight mb-2">
-                Send an Inquiry
+                Start a Discussion
               </h3>
               <p className="text-[#86868b] text-xs sm:text-sm mb-6">
-                Start a direct conversation via email or schedule an architecture discussion.
+                Direct inquiry regarding agent systems, platform engineering, or senior engineering roles.
               </p>
 
               <div className="space-y-4">
                 <a
                   href={`mailto:${personal.email}?subject=Senior%20AI%20Engineer%20Opportunity%20-%20Vinay%20Kumar&body=Hi%20Vinay,%0D%0A%0D%0AI%20reviewed%20your%20portfolio%20and%20agent%20systems%20architecture%20work.%20We%20would%20love%20to%20connect%20regarding...`}
-                  className="flex items-center justify-center gap-2 w-full py-3.5 rounded-full font-medium text-sm text-white bg-[#0071e3] hover:bg-[#0077ed] transition-all shadow-sm"
+                  className="flex items-center justify-center gap-2 w-full py-4 rounded-full font-semibold text-sm text-white bg-[#0071e3] hover:bg-[#0077ed] transition-all shadow-sm"
                 >
                   <Send className="w-4 h-4" />
                   <span>Start Email Conversation</span>
                 </a>
 
-                <div className="p-4 rounded-xl bg-white border border-black/[0.06] text-xs text-[#6e6e73] space-y-2 shadow-sm">
-                  <div className="font-semibold text-[#1d1d1f]">Discussion Areas:</div>
-                  <ul className="list-disc list-inside space-y-1 text-[#86868b]">
+                <div className="p-4 rounded-2xl bg-white border border-black/[0.06] text-xs text-[#6e6e73] space-y-2 shadow-sm">
+                  <div className="font-bold text-[#1d1d1f]">Key Focus Areas:</div>
+                  <ul className="list-disc list-inside space-y-1.5 text-[#86868b]">
                     <li>Deterministic Agent Execution Engines & State Replay</li>
                     <li>gVisor MicroVM Sandboxing for AI Agents & Tools</li>
                     <li>Model Context Protocol (MCP) Server Infrastructure</li>

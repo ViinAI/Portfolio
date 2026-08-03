@@ -25,7 +25,7 @@ export function ResumeViewerModal({ isOpen, onClose }: ResumeViewerModalProps) {
         {/* Modal Header */}
         <div className="flex items-center justify-between px-6 py-4 border-b border-black/[0.08] bg-white/90 backdrop-blur-md">
           <div className="flex items-center gap-3">
-            <div className="p-2 rounded-xl bg-[#f5f5f7] text-[#0071e3]">
+            <div className="p-2 rounded-xl bg-[#ffffff] text-[#0071e3]">
               <FileText className="w-5 h-5" />
             </div>
             <div>
@@ -50,7 +50,7 @@ export function ResumeViewerModal({ isOpen, onClose }: ResumeViewerModalProps) {
             <a
               href={portfolioData.deliverables.docx}
               download="Vinay_Kumar_CV.docx"
-              className="flex items-center gap-1.5 px-3.5 py-1.5 rounded-full text-xs font-medium bg-[#f5f5f7] hover:bg-[#e8e8ed] text-[#1d1d1f] border border-black/[0.08] transition-colors"
+              className="flex items-center gap-1.5 px-3.5 py-1.5 rounded-full text-xs font-medium bg-[#ffffff] hover:bg-[#e8e8ed] text-[#1d1d1f] border border-black/[0.08] transition-colors"
             >
               <Download className="w-3.5 h-3.5" />
               <span>Word</span>
@@ -77,7 +77,7 @@ export function ResumeViewerModal({ isOpen, onClose }: ResumeViewerModalProps) {
         </div>
 
         {/* Embedded Document Frame */}
-        <div className="flex-1 bg-[#f5f5f7] overflow-hidden relative">
+        <div className="flex-1 bg-[#ffffff] overflow-hidden relative">
           <iframe
             src={portfolioData.deliverables.html}
             title="Vinay Kumar Resume Preview"

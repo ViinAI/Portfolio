@@ -29,10 +29,10 @@ export function EducationSection() {
             >
               <div>
                 <div className="flex items-center justify-between mb-3">
-                  <div className="p-2 rounded-xl bg-[#f5f5f7] border border-black/[0.04] text-[#0071e3]">
+                  <div className="p-2 rounded-xl bg-[#ffffff] border border-black/[0.04] text-[#0071e3]">
                     <Award className="w-4 h-4" />
                   </div>
-                  <div className="flex items-center gap-1.5 px-2.5 py-0.5 rounded-full bg-[#f5f5f7] text-xs text-[#86868b] font-medium">
+                  <div className="flex items-center gap-1.5 px-2.5 py-0.5 rounded-full bg-[#ffffff] text-xs text-[#86868b] font-medium">
                     <Calendar className="w-3 h-3 text-[#0071e3]" />
                     <span>{edu.year}</span>
                   </div>

@@ -66,7 +66,7 @@ export function ArchitectureShowcase() {
 
         {/* Apple Segmented Control */}
         <div className="flex justify-center mb-12">
-          <div className="inline-flex p-1 rounded-full bg-[#f5f5f7] border border-black/[0.04] overflow-x-auto max-w-full">
+          <div className="inline-flex p-1 rounded-full bg-[#ffffff] border border-black/[0.04] overflow-x-auto max-w-full">
             {categories.map((cat) => (
               <button
                 key={cat}

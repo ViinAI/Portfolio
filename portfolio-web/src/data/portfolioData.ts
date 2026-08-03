@@ -1,18 +1,29 @@
-export interface ProjectOrPillar {
+export interface ProductItem {
   id: string;
-  title: string;
-  category: 'Platform Core' | 'Enterprise Product' | 'Solution Architecture' | 'GenAI & ML';
-  roleTag: string;
+  number: string;
+  name: string;
+  subtitle: string;
+  tagline: string;
   organization: string;
+  period: string;
+  roleTag: string;
   description: string;
+  architectureBreakdown: {
+    title: string;
+    description: string;
+  }[];
+  systemSpecs: {
+    label: string;
+    value: string;
+  }[];
   highlights: string[];
   metrics: string[];
   techStack: string[];
-  architectureDiagram?: string;
-  featured?: boolean;
+  flowCodeSnippet?: string;
 }
 
 export interface ExperienceItem {
+  id: string;
   company: string;
   role: string;
   period: string;
@@ -36,7 +47,7 @@ export const portfolioData = {
   personal: {
     name: 'Vinay Kumar',
     title: 'Senior AI Engineer',
-    subtitle: 'Enterprise AI Platforms • Agent Execution Systems • MCP Ecosystems • Production GenAI',
+    subtitle: 'Senior AI Engineer • Infosys Topaz',
     location: 'Pune, India',
     email: 'viinaimadotra@gmail.com',
     phone: '+91 9992394789',
@@ -44,356 +55,445 @@ export const portfolioData = {
     githubDisplay: 'github.com/ViinAI',
     linkedin: 'https://linkedin.com/in/viinai',
     linkedinDisplay: 'linkedin.com/in/viinai',
-    bio: 'Senior AI Engineer with 5.5+ years of hands-on experience building foundational agent execution harnesses, secure gVisor sandboxes, Model Context Protocol (MCP) ecosystems, and deal-winning enterprise AI architectures across multi-million dollar transformations.',
-    status: 'Available for Senior AI & Agent Platform Roles',
+    bio: 'Senior AI Engineer with 5+ years of experience building enterprise-scale GenAI and multi-agent systems. Skilled in end-to-end design, optimization, and deployment of LLM-powered automation with a strong focus on governance and scalability.',
+    status: 'Senior AI Engineer, Infosys Topaz',
   },
 
   stats: [
-    { label: 'Years of AI/ML Experience', value: '5.5+' },
-    { label: 'Enterprise Transformation', value: '$300M+' },
-    { label: 'Platform Surfaces Shipped', value: '3' },
-    { label: 'Latency & Lookup Gain', value: '40%' },
+    { label: 'Years of Experience', value: '5+' },
+    { label: 'AI-led Transformation Deal', value: '$300M' },
+    { label: 'Process Efficiency Improvement', value: '40%' },
+    { label: 'Agent Blueprint Build Time Cut', value: '50%' },
   ],
 
-  pillars: [
+  // Rooted precisely in CV Project Updates and Base CV
+  products: [
     {
-      id: 'agent-execution-harness',
-      title: 'Bespoke Agent Execution Engine',
-      category: 'Platform Core',
-      roleTag: 'Foundational Infrastructure',
+      id: 'agentic-platform',
+      number: '01',
+      name: 'Internal Agentic Platform',
+      subtitle: 'Standardized Blueprints & 16-Agent Pipeline',
+      tagline: 'Standardized blueprints and governance, driving 4x developer adoption.',
       organization: 'Infosys',
-      featured: true,
+      period: 'Dec 2024 – Present',
+      roleTag: 'Agent Platform',
       description:
-        'Architected and engineered a high-reliability, event-driven agent execution runtime supporting deterministic state reconstruction, step-level checkpointing, and uninterrupted workflow continuity across distributed agent clusters.',
-      highlights: [
-        'Deterministic state reconstruction with crash-resilient event sourcing',
-        'Fine-grained checkpointing for long-running autonomous workflows',
-        'State-machine abstraction decoupling LLM reasoning loops from execution environments',
+        'Spearheaded an internal agentic platform that standardized blueprints and governance. Architected a production 16-agent pipeline with 5 HITL checkpoints, delivering 95% straight-through automation across complex enterprise workflows.',
+      architectureBreakdown: [
+        {
+          title: 'Agentic Execution Harness',
+          description:
+            'Designed and evolved a full agentic execution harness built around event-log-driven orchestration, custom context projection, state reconstruction, and long-running workflow continuity.',
+        },
+        {
+          title: 'LLM "Compiler"',
+          description:
+            'Built an LLM compiler (prompt planning/optimization + caching + tool orchestration) that reduced median latency 35% while maintaining quality.',
+        },
+        {
+          title: 'Skill Authoring Platform',
+          description:
+            'Led development of an AI-assisted Skill Authoring Platform that accelerates creation, testing, packaging, and onboarding of reusable enterprise skills.',
+        },
       ],
-      metrics: ['Zero state loss during crash recovery', 'Distributed multi-agent orchestration'],
-      techStack: ['Event-Driven Architecture', 'State Reconstruction', 'Python', 'TypeScript', 'Docker', 'Distributed Systems'],
+      systemSpecs: [
+        { label: 'Pipeline Scale', value: '16-agent pipeline' },
+        { label: 'Automation Rate', value: '95% straight-through' },
+        { label: 'Latency Reduction', value: '35% reduction' },
+        { label: 'Build Time Reduction', value: '50% cut' },
+      ],
+      highlights: [
+        'Architected a production 16-agent pipeline with 5 HITL checkpoints',
+        'Spearheaded an internal agentic platform cutting build time 50%',
+        'Built an LLM compiler reducing median latency 35%',
+      ],
+      metrics: ['95% automation', '50% faster build time', '4x developer adoption'],
+      techStack: ['Python', 'LLM Agents', 'Event-Log Orchestration', 'Caching', 'Tool Orchestration'],
+      flowCodeSnippet: `// Event-Log Driven Execution Harness
+await harness.execute({
+  workflow: "16_agent_pipeline",
+  hitl_checkpoints: 5,
+  context_projection: true,
+  state_reconstruction: true
+});`,
     },
     {
       id: 'gvisor-sandbox',
-      title: 'Isolated Multi-Tenant Execution Sandbox',
-      category: 'Platform Core',
-      roleTag: 'Security & Isolation',
+      number: '02',
+      name: 'DeepAgent-Compatible Sandbox',
+      subtitle: 'gVisor-based Secure Execution Environment',
+      tagline: 'Secure execution environments for AI agents and MCP servers.',
       organization: 'Infosys',
-      featured: true,
+      period: 'Dec 2024 – Present',
+      roleTag: 'Security & Infrastructure',
       description:
-        'Engineered a secure microVM-level execution sandbox leveraging gVisor for safe, multi-tenant execution of arbitrary untrusted agent code, external MCP servers, and runtime-loaded skill packs.',
-      highlights: [
-        'Strict kernel syscall filtering via gVisor sandbox boundary',
-        'Dynamic ephemeral container lifecycle management with microsecond cold starts',
-        'Secure socket proxying for controlled agent tool invocation',
+        'Architected a DeepAgent-compatible sandbox platform based on gVisor, enabling secure execution environments for AI agents, MCP servers, and user-authored skills while supporting isolation, reproducibility, and enterprise governance requirements.',
+      architectureBreakdown: [
+        {
+          title: 'gVisor Isolation',
+          description:
+            'Platform based on gVisor to enable secure, isolated execution environments for AI components.',
+        },
+        {
+          title: 'Enterprise Governance',
+          description:
+            'Supports reproducibility and strict enterprise governance requirements for user-authored skills.',
+        },
+        {
+          title: 'Modular User Onboarding',
+          description:
+            'Developed a modular User Onboarding Platform capable of operating independently or integrating with sandbox infrastructure, providing environment provisioning and access management.',
+        },
       ],
-      metrics: ['Sub-second cold starts', '100% untrusted code containment'],
-      techStack: ['gVisor', 'Linux Kernel Namespaces', 'Docker', 'Security Sandboxing', 'Go / Python'],
+      systemSpecs: [
+        { label: 'Runtime Environment', value: 'gVisor Sandbox' },
+        { label: 'Execution Targets', value: 'Agents, MCP, Skills' },
+        { label: 'Compliance Focus', value: 'Enterprise Governance' },
+        { label: 'Integration', value: 'Modular Onboarding Platform' },
+      ],
+      highlights: [
+        'Architected a DeepAgent-compatible sandbox platform based on gVisor',
+        'Enabled secure execution environments for MCP servers and skills',
+        'Developed a modular User Onboarding Platform for access management',
+      ],
+      metrics: ['Secure isolation', 'Enterprise reproducibility'],
+      techStack: ['gVisor', 'DeepAgent Sandbox', 'Access Management', 'Environment Provisioning'],
+      flowCodeSnippet: `// Sandbox Execution Context
+const sandbox = new gVisorSandbox({
+  mode: "DeepAgent-compatible",
+  isolation: "strict",
+  targets: ["agent", "mcp_server", "user_skill"]
+});
+await sandbox.provision();`,
     },
     {
       id: 'mcp-platform',
-      title: 'Model Context Protocol (MCP) Platform',
-      category: 'Platform Core',
-      roleTag: 'Ecosystem Infrastructure',
+      number: '03',
+      name: 'MCP Authoring & Onboarding Portal',
+      subtitle: 'AI-assisted Tooling Connectivity',
+      tagline: 'Simplifies creation, validation, and lifecycle management of MCP servers.',
       organization: 'Infosys',
-      featured: true,
+      period: 'Dec 2024 – Present',
+      roleTag: 'Platform Ecosystem',
       description:
-        'Built an end-to-end enterprise platform for importing, generating, validating, and hosting Model Context Protocol (MCP) servers with automated schema discovery and tool lifecycle management.',
-      highlights: [
-        'AI-assisted MCP server authoring and automated tool schema validation',
-        'Dynamic tool routing and policy enforcement across heterogeneous agent runtimes',
-        'One-click OpenAPI to MCP converter pipeline',
+        'Built an AI-assisted MCP Authoring and Onboarding Portal that simplifies creation, registration, validation, and lifecycle management of MCP servers, reducing integration effort and standardizing enterprise tool connectivity.',
+      architectureBreakdown: [
+        {
+          title: 'AI-Assisted Authoring',
+          description:
+            'Provides guided generation and lifecycle management to simplify the creation of MCP servers.',
+        },
+        {
+          title: 'Enterprise Standardization',
+          description:
+            'Standardizes enterprise tool connectivity and reduces overall integration effort across the organization.',
+        },
+        {
+          title: 'Workspace-Centric Architecture',
+          description:
+            'Defined platform architecture for workspace-centric execution, enabling agents, skills, and MCP servers to collaborate within shared execution environments.',
+        },
       ],
-      metrics: ['Enterprise MCP Server Registry', 'Automated Tool Spec Validation'],
-      techStack: ['Model Context Protocol (MCP)', 'TypeScript', 'Python', 'OpenAPI', 'FastAPI'],
+      systemSpecs: [
+        { label: 'Portal Type', value: 'Authoring & Onboarding' },
+        { label: 'Protocol', value: 'Model Context Protocol (MCP)' },
+        { label: 'Lifecycle', value: 'Creation, Registration, Validation' },
+        { label: 'Architecture', value: 'Workspace-centric execution' },
+      ],
+      highlights: [
+        'Built an AI-assisted MCP Authoring and Onboarding Portal',
+        'Defined platform architecture for workspace-centric agent execution',
+        'Standardized enterprise tool connectivity',
+      ],
+      metrics: ['Reduced integration effort', 'Standardized connectivity'],
+      techStack: ['Model Context Protocol', 'AI-assisted Code Generation', 'Enterprise Tooling'],
+      flowCodeSnippet: `// Workspace-Centric MCP Execution
+await workspace.collaborate({
+  components: ["orchestrator", "mcp_server", "skill_pack"],
+  shared_environment: true,
+  traceability: "enabled"
+});`,
     },
     {
-      id: 'process-harness-product',
-      title: 'Process-Centric Autonomous Harness',
-      category: 'Enterprise Product',
-      roleTag: 'Product Engineering',
+      id: 'telecom-transformation',
+      number: '04',
+      name: '$300M Telecom AI Transformation',
+      subtitle: 'Full-stack Agentic Workflows & Contract Agents',
+      tagline: 'Led digital transformation securing a $300M AI-led deal.',
       organization: 'Infosys',
-      featured: true,
+      period: 'Dec 2024 – Present',
+      roleTag: 'End-to-End Delivery',
       description:
-        'Composed foundational agent runtime and MCP systems into a turnkey enterprise product enabling visual process authoring, OpenAPI onboarding, and autonomous business workflow execution.',
-      highlights: [
-        'Visual workflow canvas bridging business analysts and autonomous agents',
-        'Dynamic OpenAPI spec ingestion and automatic tool linking',
-        'Active enterprise GTM (Go-To-Market) deployment across Fortune 500 clients',
+        'Led digital transformation for a Tier-1 telecom by designing full-stack agentic workflows; improved process efficiency 40% and helped secure a $300M AI-led transformation deal. Owned end-to-end delivery from base tables to frontend evaluation.',
+      architectureBreakdown: [
+        {
+          title: 'End-to-End Delivery',
+          description:
+            'Assessed as-is workflows, defined data models/base tables, and shipped agents from backend to frontend with evaluation and monitoring.',
+        },
+        {
+          title: 'Contract-Comparison Agents',
+          description:
+            'Delivered contract-comparison agents for 5 enterprise clients, reducing manual review time 60% and improving auditability.',
+        },
+        {
+          title: 'Process Efficiency',
+          description:
+            'Designed full-stack agentic workflows that directly improved overall process efficiency by 40% for a Tier-1 telecom client.',
+        },
       ],
-      metrics: ['Enterprise Client Deployments', 'Active Go-To-Market Phase'],
-      techStack: ['React / Next.js', 'FastAPI', 'Autonomous Agents', 'OpenAPI Spec', 'Redis', 'PostgreSQL'],
+      systemSpecs: [
+        { label: 'Client Industry', value: 'Tier-1 Telecom' },
+        { label: 'Contract Value', value: '$300M' },
+        { label: 'Review Time Reduction', value: '60%' },
+        { label: 'Delivery Scope', value: 'Backend to Frontend' },
+      ],
+      highlights: [
+        'Led digital transformation for a Tier-1 telecom improving efficiency 40%',
+        'Helped secure a $300M AI-led transformation deal',
+        'Delivered contract-comparison agents reducing manual review time 60%',
+      ],
+      metrics: ['$300M deal secured', '60% less manual review time', '40% process efficiency gain'],
+      techStack: ['Full-stack Agent Workflows', 'Data Modeling', 'Evaluation & Monitoring'],
+      flowCodeSnippet: `// Contract-Comparison Agent Evaluation
+const comparison = await contractAgent.compare({
+  documents: ["contract_A.pdf", "contract_B.pdf"],
+  clients: 5,
+  auditability_mode: true
+});
+frontend.render(comparison.insights);`,
     },
     {
-      id: 'user-centric-harness',
-      title: 'Multi-Surface Developer Platform',
-      category: 'Enterprise Product',
-      roleTag: 'Developer Experience',
-      organization: 'Infosys',
-      featured: false,
-      description:
-        'Built a cohesive multi-surface developer ecosystem consisting of a Web Portal (AGUI / A2UI), unified CLI tool, and VS Code IDE extension exposing full agent capabilities to developer workflows.',
-      highlights: [
-        'Web Portal (AGUI/A2UI) for visual agent monitoring, evaluation, and telemetry',
-        'VS Code IDE Extension for inline agent copilot and MCP tool testing',
-        'High-performance CLI for CI/CD automation and local agent debugging',
-      ],
-      metrics: ['3 unified developer interfaces', 'Single backend runtime'],
-      techStack: ['VS Code API', 'Next.js', 'TypeScript CLI', 'WebSockets', 'AGUI/A2UI'],
-    },
-    {
-      id: 'deal-wins-solutions',
-      title: '$300M Telecom Transformation & AI Solutions',
-      category: 'Solution Architecture',
-      roleTag: 'Principal Solutions',
-      organization: 'Infosys',
-      featured: true,
-      description:
-        'Independently architected mission-critical enterprise AI solutions that secured pivotal multi-million dollar client contracts for Infosys.',
-      highlights: [
-        'Architected $300M Telecom digital transformation powered by autonomous agent workflows',
-        'Designed Digital Tutor AI platform for interactive, adaptive knowledge mastery',
-        'Created CMDB AI intelligence engine for automated IT asset discovery and configuration mapping',
-      ],
-      metrics: ['$300M contract won', '3 Major Enterprise Solutions Delivered'],
-      techStack: ['Enterprise Solution Architecture', 'RAG', 'Agent Workflows', 'Multi-Agent Systems', 'AWS'],
-    },
-    {
-      id: 'summarization-microservice',
-      title: 'OEM Delivery Text Summarization Engine',
-      category: 'GenAI & ML',
-      roleTag: 'Production GenAI',
+      id: 'text-summarization-rag',
+      number: '05',
+      name: 'OEM Summarization & RAG Services',
+      subtitle: 'LLaMA API & Conversational Chatbot',
+      tagline: 'High-throughput summarization API and enterprise RAG systems.',
       organization: 'Xcaliber Infotech',
-      featured: false,
+      period: 'Dec 2022 – Dec 2024',
+      roleTag: 'Data Scientist',
       description:
-        'Built a high-throughput text summarization microservice utilizing fine-tuned LLaMA, BART, spaCy, and PyTorch to digest voluminous OEM delivery waiver comments and feed warehouse ERP systems.',
-      highlights: [
-        'Fine-tuned open-source LLMs (LLaMA, BART) for domain-specific industrial terminology',
-        'Automated real-time extraction pipeline directly linked to enterprise warehouse ERPs',
+        'Built a LLaMA-based text-summarization service to process OEM comments and an LLM-powered chatbot for data retrieval, accelerating stakeholder Q&A and reducing manual lookups.',
+      architectureBreakdown: [
+        {
+          title: 'Text-Summarization Service',
+          description:
+            'Built a LLaMA-based service (spaCy, BART, PyTorch) to process OEM comments for inventory-delivery waivers; exposed it as a secure API.',
+        },
+        {
+          title: 'LLM-Powered Chatbot (RAG)',
+          description:
+            'Developed and deployed an LLM-powered chatbot (Hugging Face Transformers, LangChain, ChromaDB, Flask) for data retrieval and analysis.',
+        },
+        {
+          title: 'Accessory Recommender',
+          description:
+            'Designed an Accessory Recommender suggesting three add-ons using phone-accessory affinity and location-aware inventory, increasing sales 25%.',
+        },
       ],
-      metrics: ['High-throughput streaming', 'Sub-second parsing latency'],
-      techStack: ['LLaMA', 'BART', 'PyTorch', 'spaCy', 'FastAPI', 'ERP Integration'],
-    },
-    {
-      id: 'rag-assistant',
-      title: 'Enterprise Conversational RAG Assistant',
-      category: 'GenAI & ML',
-      roleTag: 'Information Retrieval',
-      organization: 'Xcaliber Infotech',
-      featured: false,
-      description:
-        'Designed and deployed an enterprise retrieval-augmented generation (RAG) assistant using LangChain, ChromaDB, and Hugging Face Transformers.',
-      highlights: [
-        'Semantic chunking and hybrid retrieval algorithms over corporate document repositories',
-        'Reduced internal document lookup duration by 40% across engineering and operations teams',
+      systemSpecs: [
+        { label: 'Models Used', value: 'LLaMA, BART, Hugging Face' },
+        { label: 'Vector Store', value: 'ChromaDB' },
+        { label: 'Integration', value: 'Secure API & Flask' },
+        { label: 'Sales Increase', value: '25% (Accessory Bundles)' },
       ],
-      metrics: ['40% lookup time reduction', 'High retrieval precision'],
-      techStack: ['LangChain', 'ChromaDB', 'Hugging Face', 'Sentence-Transformers', 'Python'],
-    },
-    {
-      id: 'accessory-recommender',
-      title: 'Location-Aware Affinity Recommender',
-      category: 'GenAI & ML',
-      roleTag: 'Machine Learning',
-      organization: 'Xcaliber Infotech',
-      featured: false,
-      description:
-        'Engineered an intelligent affinity recommendation engine correlating regional inventory distributions with historical customer purchasing patterns.',
       highlights: [
-        'Collaborative filtering and geospatial inventory matching',
-        'Boosted weekly accessory bundle attachment rates by 25% across regional retail outlets',
+        'Built a LLaMA-based text-summarization service for OEM comments',
+        'Developed an LLM-powered chatbot accelerating stakeholder Q&A',
+        'Designed an Accessory Recommender that increased sales 25%',
       ],
-      metrics: ['+25% accessory bundle sales', 'Real-time inference'],
-      techStack: ['Scikit-Learn', 'Pandas', 'PostgreSQL', 'FastAPI', 'Affinity Modeling'],
+      metrics: ['25% bundle sales increase', 'Reduced manual lookups', 'Secure API integration'],
+      techStack: ['LLaMA', 'BART', 'PyTorch', 'spaCy', 'LangChain', 'ChromaDB', 'Flask'],
+      flowCodeSnippet: `// Text Summarization & RAG Pipeline
+const summary = await llamaService.summarize({
+  input: oemComments,
+  model: "BART+LLaMA",
+  pipeline: "spaCy"
+});
+const ragResponse = await langChainBot.query(summary);`,
     },
-  ] as ProjectOrPillar[],
+  ] as ProductItem[],
 
+  // Rooted precisely in CV Experience Section
   experience: [
     {
+      id: 'infosys',
       company: 'Infosys',
-      role: 'Senior AI Engineer',
+      role: 'Senior Data Scientist / AI Engineer',
       period: 'Dec 2024 – Present',
       location: 'Pune, India',
       summary:
-        'Designing foundational agent infrastructure, composing it into enterprise products, and architecting strategic AI solutions across domains.',
+        'Led digital transformation for a Tier-1 telecom, architected a 16-agent pipeline, and spearheaded an internal agentic platform to standardize enterprise AI deployments.',
       achievements: [
         {
-          lead: 'Execution Harness',
           description:
-            'Designed and built a bespoke event-driven agent execution engine supporting deterministic state reconstruction, checkpointing, and long-running workflow continuity across distributed agent instances.',
-          tags: ['Event-Driven', 'State Reconstruction', 'Agent Runtime'],
+            'Led digital transformation for a Tier-1 telecom by designing full-stack agentic workflows; improved process efficiency 40% and helped secure a $300M AI-led transformation deal.',
+          tags: ['$300M Deal', 'Tier-1 Telecom', 'Agentic Workflows'],
         },
         {
-          lead: 'Sandbox',
           description:
-            'Built an isolated execution sandbox leveraging gVisor for secure, reproducible execution of untrusted agent code, MCP servers, and dynamically loaded skills.',
-          tags: ['gVisor', 'Sandboxing', 'Security', 'Isolation'],
+            'Architected a production 16-agent pipeline with 5 HITL checkpoints, delivering 95% straight-through automation across complex enterprise workflows.',
+          tags: ['16-Agent Pipeline', 'HITL Checkpoints', '95% Automation'],
         },
         {
-          lead: 'MCP Platform',
           description:
-            'Created a platform for importing, building, and hosting Model Context Protocol (MCP) servers with AI-assisted authoring, validation, and lifecycle management.',
-          tags: ['Model Context Protocol', 'Tool Discovery', 'FastAPI'],
+            'Spearheaded an internal agentic platform that standardized blueprints and governance, cutting build time 50% and driving 4x developer adoption over two quarters.',
+          tags: ['Agentic Platform', 'Standardized Blueprints', 'Governance'],
         },
         {
-          lead: 'Process-Centric Harness',
           description:
-            'Composed foundational components into a full product enabling end-to-end process authoring, skill linking, OpenAPI spec onboarding, and autonomous execution. Deployed across multiple enterprise clients and under active go-to-market.',
-          tags: ['Product Development', 'OpenAPI', 'Enterprise GTM'],
+            'Built an LLM "compiler" (prompt planning/optimization + caching + tool orchestration) that reduced median latency 35% while maintaining quality.',
+          tags: ['LLM Compiler', 'Tool Orchestration', 'Latency Optimization'],
         },
         {
-          lead: 'User-Centric Harness',
           description:
-            'Built a multi-surface developer platform — including Web Portal (AGUI/A2UI), CLI, and VS Code Extension — exposing agent capabilities for developer and operational workflows.',
-          tags: ['VS Code Extension', 'AGUI/A2UI', 'Developer Tools'],
+            'Delivered contract-comparison agents for 5 enterprise clients, reducing manual review time 60% and improving auditability.',
+          tags: ['Contract-Comparison', 'Auditability', 'Client Delivery'],
         },
         {
-          lead: 'Solution Architecture & Deal Wins',
           description:
-            'Independently architected diverse AI solutions — including a $300M Telecom transformation, Digital Tutor platform, and CMDB platform — driving multiple deal wins for Infosys.',
-          tags: ['$300M Transformation', 'Digital Tutor', 'CMDB AI'],
+            'Owned end-to-end delivery: assessed as-is workflows, defined data models/base tables, and shipped agents from backend to frontend with evaluation and monitoring.',
+          tags: ['End-to-End Delivery', 'Data Models', 'Evaluation'],
+        },
+        {
+          description:
+            'Architected a DeepAgent-compatible sandbox platform based on gVisor, enabling secure execution environments for AI agents, MCP servers, and user-authored skills.',
+          tags: ['gVisor', 'DeepAgent Sandbox', 'MCP Servers'],
+        },
+        {
+          description:
+            'Built an AI-assisted MCP Authoring and Onboarding Portal that simplifies creation, registration, validation, and lifecycle management of MCP servers.',
+          tags: ['MCP Portal', 'Lifecycle Management', 'Tool Connectivity'],
         },
       ],
       techStack: [
-        'Agent Systems',
-        'gVisor',
-        'MCP',
         'Python',
-        'TypeScript',
-        'FastAPI',
-        'Next.js',
-        'Docker',
-        'Kubernetes',
-        'AWS',
+        'LLM Agents',
+        'gVisor',
+        'Model Context Protocol',
+        'Event-Log Orchestration',
+        'State Reconstruction',
       ],
     },
     {
+      id: 'xcaliber',
       company: 'Xcaliber Infotech',
-      role: 'AI Engineer',
+      role: 'Data Scientist',
       period: 'Dec 2022 – Dec 2024',
       location: 'Pune, India',
       summary:
-        'Spearheaded production GenAI microservices, RAG conversational pipelines, and ML recommendation systems for enterprise clients.',
+        'Built LLaMA-based summarization APIs, LLM-powered RAG chatbots, and recommendation engines to optimize warehouse efficiency and increase bundle sales.',
       achievements: [
         {
-          lead: 'Summarization Microservice',
           description:
-            'Built a high-throughput text summarization service using LLaMA, BART, spaCy, and PyTorch to process OEM delivery waiver comments, integrating with warehouse ERP systems.',
-          tags: ['LLaMA', 'BART', 'PyTorch', 'ERP Integration'],
+            'Built a LLaMA-based text-summarization service (spaCy, BART, PyTorch) to process OEM comments for inventory-delivery waivers; exposed it as a secure API and integrated with internal apps, improving warehouse efficiency and charge management.',
+          tags: ['LLaMA', 'BART', 'PyTorch', 'spaCy'],
         },
         {
-          lead: 'Enterprise RAG Assistant',
           description:
-            'Developed a conversational assistant using LangChain, ChromaDB, and Hugging Face Transformers, reducing internal document lookup time by 40%.',
-          tags: ['LangChain', 'ChromaDB', 'Hugging Face', 'RAG'],
+            'Developed and deployed an LLM-powered chatbot (Hugging Face Transformers, LangChain, ChromaDB, Flask) for data retrieval and analysis; accelerated stakeholder Q&A and reduced manual lookups.',
+          tags: ['LangChain', 'ChromaDB', 'Hugging Face', 'Flask'],
         },
         {
-          lead: 'Accessory Recommender',
           description:
-            'Designed a location-aware affinity recommendation engine matching regional inventory with purchase patterns, boosting weekly accessory bundle sales by 25%.',
-          tags: ['Affinity Modeling', 'Scikit-Learn', '+25% Sales'],
+            'Created an API layer to manage and update summarized comments and audit logs; enabled role-based insights from dashboards for operations teams.',
+          tags: ['API Layer', 'Audit Logs', 'Role-Based Insights'],
         },
         {
-          lead: 'API & Telemetry Layer',
           description:
-            'Developed REST APIs and real-time operations dashboards for role-based analytics and audit tracking.',
-          tags: ['FastAPI', 'Telemetry', 'Dashboards'],
+            'Designed an Accessory Recommender that suggests three add-ons using phone-accessory affinity and location-aware inventory; launched a weekly bundle recommendation that increased sales 25%.',
+          tags: ['Accessory Recommender', 'Affinity Modeling', '25% Sales Increase'],
         },
       ],
       techStack: [
         'LLaMA',
         'BART',
-        'LangChain',
-        'ChromaDB',
         'PyTorch',
         'spaCy',
-        'FastAPI',
-        'Docker',
-        'PostgreSQL',
+        'LangChain',
+        'ChromaDB',
+        'Flask',
+        'Hugging Face',
       ],
     },
     {
+      id: 'concentrix',
       company: 'Concentrix India',
       role: 'Data Analyst',
       period: 'Oct 2015 – Apr 2017',
       location: 'Gurgaon, India',
       summary:
-        'Developed end-to-end data analytics pipelines, automated ETL workflows, and predictive business forecasting models.',
+        'Built operational pipelines and performed exploratory analysis to support business reporting.',
       achievements: [
         {
-          lead: 'Analytics Pipelines',
           description:
-            'Built automated Python and SQL ETL pipelines and executive reporting dashboards.',
-          tags: ['Python', 'SQL ETL', 'Executive Dashboards'],
+            'Built Python/SQL pipelines and dashboards for operations analytics.',
+          tags: ['Python', 'SQL', 'Pipelines', 'Dashboards'],
         },
         {
-          lead: 'Predictive Modeling',
           description:
-            'Performed regression and classification modeling for business forecasting and workforce planning.',
-          tags: ['Regression', 'Classification', 'Workforce Modeling'],
+            'Performed exploratory analysis and predictive modelling (regression/classification) to support business reporting.',
+          tags: ['Predictive Modelling', 'Regression', 'Classification'],
         },
       ],
-      techStack: ['Python', 'SQL', 'Pandas', 'NumPy', 'Tableau', 'Excel Modeling'],
+      techStack: ['Python', 'SQL', 'Regression', 'Classification'],
     },
   ] as ExperienceItem[],
 
+  // Rooted precisely in CV Skills section
   skillCategories: [
     {
-      title: 'AI Platform & Agent Systems',
-      subtitle: 'Execution runtimes, sandboxes, protocol layers & orchestration',
-      skills: [
-        { name: 'Event-Driven Architecture', level: 'Expert', highlight: true },
-        { name: 'Agent Execution Harnesses', level: 'Expert', highlight: true },
-        { name: 'gVisor Sandboxing', level: 'Expert', highlight: true },
-        { name: 'Model Context Protocol (MCP)', level: 'Expert', highlight: true },
-        { name: 'Process Orchestration', level: 'Expert', highlight: true },
-        { name: 'Multi-Agent Systems', level: 'Expert', highlight: true },
-        { name: 'Deterministic State Reconstruction', level: 'Expert' },
-        { name: 'Semantic Caching', level: 'Advanced' },
-        { name: 'LLM Compilers & State Machines', level: 'Advanced' },
-      ],
-    },
-    {
-      title: 'GenAI & LLM Stack',
-      subtitle: 'Open-source models, retrieval systems, fine-tuning & prompt frameworks',
-      skills: [
-        { name: 'LLaMA & Mistral', level: 'Expert', highlight: true },
-        { name: 'GPT-4 & Azure OpenAI', level: 'Expert', highlight: true },
-        { name: 'Hugging Face Transformers', level: 'Expert', highlight: true },
-        { name: 'LangChain & LlamaIndex', level: 'Expert', highlight: true },
-        { name: 'Advanced RAG Architectures', level: 'Expert', highlight: true },
-        { name: 'Vector DBs (ChromaDB, Pinecone, FAISS)', level: 'Expert' },
-        { name: 'BERT, BART, RoBERTa', level: 'Advanced' },
-        { name: 'Embeddings & Rerankers', level: 'Advanced' },
-      ],
-    },
-    {
-      title: 'Machine Learning & Data Science',
-      subtitle: 'Deep learning frameworks, NLP libraries & predictive statistical algorithms',
-      skills: [
-        { name: 'PyTorch', level: 'Expert', highlight: true },
-        { name: 'TensorFlow', level: 'Advanced' },
-        { name: 'Scikit-Learn', level: 'Expert' },
-        { name: 'spaCy & NLTK', level: 'Expert' },
-        { name: 'Named Entity Recognition (NER)', level: 'Expert' },
-        { name: 'Recommendation Engines', level: 'Expert', highlight: true },
-        { name: 'Regression & Classification', level: 'Expert' },
-        { name: 'Time-Series & Forecasting', level: 'Advanced' },
-      ],
-    },
-    {
-      title: 'Languages & Infrastructure',
-      subtitle: 'Backend services, cloud orchestration, databases & developer tooling',
+      title: 'Programming & Data',
+      subtitle: 'Core languages, libraries, and frameworks',
       skills: [
         { name: 'Python', level: 'Expert', highlight: true },
-        { name: 'TypeScript / JavaScript', level: 'Expert', highlight: true },
-        { name: 'FastAPI & Flask', level: 'Expert', highlight: true },
-        { name: 'Docker & MicroVMs', level: 'Expert', highlight: true },
-        { name: 'Kubernetes', level: 'Advanced' },
-        { name: 'AWS (EC2, S3, SageMaker, Lambda)', level: 'Advanced', highlight: true },
-        { name: 'PostgreSQL & MySQL', level: 'Expert' },
-        { name: 'Next.js & React', level: 'Expert' },
-        { name: 'Git & CI/CD Pipelines', level: 'Expert' },
+        { name: 'SQL', level: 'Expert', highlight: true },
+        { name: 'Flask', level: 'Expert' },
+        { name: 'Git/GitHub', level: 'Expert' },
+        { name: 'AWS', level: 'Advanced', highlight: true },
+        { name: 'NumPy', level: 'Expert' },
+        { name: 'pandas', level: 'Expert' },
+        { name: 'Matplotlib', level: 'Advanced' },
+        { name: 'RegEx', level: 'Advanced' },
+      ],
+    },
+    {
+      title: 'NLP & GenAI',
+      subtitle: 'Language models, frameworks, and vector databases',
+      skills: [
+        { name: 'Transformers (BERT, RoBERTa, LLaMA)', level: 'Expert', highlight: true },
+        { name: 'LangChain', level: 'Expert', highlight: true },
+        { name: 'ChromaDB', level: 'Expert', highlight: true },
+        { name: 'Hugging Face', level: 'Expert', highlight: true },
+        { name: 'spaCy', level: 'Expert' },
+        { name: 'NLTK', level: 'Expert' },
+        { name: 'Word2Vec & TF-IDF', level: 'Advanced' },
+        { name: 'NER', level: 'Advanced' },
+      ],
+    },
+    {
+      title: 'Deep Learning',
+      subtitle: 'Neural network architectures and deep learning frameworks',
+      skills: [
+        { name: 'TensorFlow', level: 'Expert', highlight: true },
+        { name: 'Keras', level: 'Advanced' },
+        { name: 'PyTorch', level: 'Expert', highlight: true },
+        { name: 'ANN & CNN', level: 'Expert' },
+        { name: 'RNN & LSTM', level: 'Expert' },
+        { name: 'Encoders/Decoders', level: 'Advanced' },
+      ],
+    },
+    {
+      title: 'Machine Learning',
+      subtitle: 'Statistical algorithms and predictive modeling',
+      skills: [
+        { name: 'Scikit-learn', level: 'Expert', highlight: true },
+        { name: 'Linear/Logistic Regression', level: 'Expert' },
+        { name: 'Decision Trees & Random Forest', level: 'Expert', highlight: true },
+        { name: 'KNN', level: 'Advanced' },
+        { name: 'SVM', level: 'Advanced' },
+        { name: 'AdaBoost', level: 'Advanced' },
+        { name: 'K-Means', level: 'Advanced' },
       ],
     },
   ] as SkillCategory[],
@@ -401,15 +501,15 @@ export const portfolioData = {
   education: [
     {
       degree: 'PG-Diploma in Artificial Intelligence (PGDAI)',
-      institution: 'C-DAC, Pune',
+      institution: 'CDAC, Pune',
       year: '2022',
-      focus: 'Advanced Machine Learning, Deep Learning, Natural Language Processing, Computer Vision',
+      focus: 'Artificial Intelligence',
     },
     {
-      degree: 'B.Tech in Mechanical Engineering',
-      institution: 'Jind Institute of Engineering & Technology (JIET), Jind',
+      degree: 'B.Tech',
+      institution: 'JIET, Jind',
       year: '2014',
-      focus: 'Computational Systems, Mathematical Analysis, Engineering Mechanics',
+      focus: 'Engineering',
     },
   ],
 
