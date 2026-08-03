@@ -3,6 +3,10 @@
   "version": "1.0.0",
   "main": "fetch_linkedin.js",
   "scripts": {
+    "dev": "npm --prefix portfolio-web run dev",
+    "build": "npm --prefix portfolio-web run build",
+    "start": "npm --prefix portfolio-web run start",
+    "export:cvs": "node master_export.js && node generate_docx.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],

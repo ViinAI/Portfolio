@@ -19,6 +19,15 @@ __pycache__/
 *.log
 scratch/
 
+# Next.js & Build Artifacts
+.next/
+portfolio-web/.next/
+portfolio-web/node_modules/
+out/
+build/
+dist/
+
 # OS Specific
 .DS_Store
 Thumbs.db
+
