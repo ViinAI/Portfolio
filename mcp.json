@@ -1,0 +1,15 @@
+{
+  "mcpServers": {
+    "playwright": {
+      "command": "c:\\Users\\Madotra\\Downloads\\Portfolio\\.tools\\node-v20.18.0-win-x64\\node.exe",
+      "args": [
+        "c:\\Users\\Madotra\\Downloads\\Portfolio\\.tools\\node-v20.18.0-win-x64\\node_modules\\@playwright\\mcp\\cli.js",
+        "--browser",
+        "chrome",
+        "--caps",
+        "vision,devtools",
+        "--allow-unrestricted-file-access"
+      ]
+    }
+  }
+}

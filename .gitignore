@@ -1,0 +1,24 @@
+# Environment & Secrets
+.env
+.env.*
+.secrets/
+*.key
+*.token
+
+# Dependencies & Tools
+node_modules/
+.tools/
+.venv/
+.agents/
+__pycache__/
+*.pyc
+
+# Chrome Profiles & Temporary Files
+.chrome_live_profile/
+.system_generated/
+*.log
+scratch/
+
+# OS Specific
+.DS_Store
+Thumbs.db

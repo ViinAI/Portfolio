@@ -1,0 +1,86 @@
+\documentclass[10pt,a4paper]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[margin=0.65in]{geometry}
+\usepackage{hyperref}
+\usepackage{titlesec}
+\usepackage{enumitem}
+\usepackage{lmodern}
+
+% Colors and Hyperlink setup
+\hypersetup{
+    colorlinks=true,
+    linkcolor=blue,
+    urlcolor=blue,
+}
+
+% Section formatting with horizontal rule
+\titleformat{\section}
+  {\large\bfseries\raggedright}{}{0em}{}[\titlerule]
+\titlespacing*{\section}{0pt}{1.1ex plus .1ex minus .1ex}{0.6ex plus .1ex minus .1ex}
+
+% List spacing
+\setlist[itemize]{leftmargin=1.4em, itemsep=1.5pt, topsep=1.5pt}
+
+\pagestyle{empty}
+
+\begin{document}
+
+% Header
+\begin{center}
+    {\Huge \textbf{Vinay Kumar}}\\[3pt]
+    {\large \textbf{Senior AI Engineer \& Agentic Systems Architect}}\\[3pt]
+    Pune, India \quad -- \quad 9992394789 \quad -- \quad \href{mailto:viinaimadotra@gmail.com}{viinaimadotra@gmail.com}\\[2pt]
+    \href{https://www.linkedin.com/in/viinai}{LinkedIn} \quad \textbar \quad \href{https://github.com/ViinAI}{GitHub}
+\end{center}
+
+\vspace{-4pt}
+
+% Professional Summary
+\section*{Professional Summary}
+Senior AI Engineer and Architect with \textbf{5.5+ years of experience across Data Science, Predictive Analytics, and Enterprise Agentic AI Platforms}. Proven track record designing foundational AI infrastructure (\textbf{gVisor secure sandboxes, event-log execution harnesses, and Model Context Protocol/MCP platforms}) and scaling production products across \textbf{Process Automation} (driving a \$300M Telecom transformation deal with a 16-agent HITL pipeline) and \textbf{User-Centric Harnesses} exposed via \textbf{Web, CLI, VS Code Extension, and SDKs}.
+
+% Professional Experience
+\section*{Professional Experience}
+
+\textbf{Infosys --- Senior Data Scientist / AI Engineer} \hfill \textbf{Dec 2024 -- Present}
+\begin{itemize}
+    \item \textbf{Foundational Sandbox Platform:} Architected a DeepAgent-compatible execution sandbox leveraging \textbf{gVisor}, enforcing microVM-level isolation, deterministic reproducibility, and strict security governance for untrusted agent code, MCP servers, and dynamic skills.
+    \item \textbf{Event-Driven Execution Harness:} Engineered a core agent execution runtime featuring \textbf{event-log-driven state reconstruction, dynamic context projection, checkpointing, and long-running workflow continuity} for complete observability and auditability.
+    \item \textbf{MCP Platform \& Skill Engine:} Built an AI-assisted authoring, registration, validation, and lifecycle onboarding portal for \textbf{Model Context Protocol (MCP) servers} and reusable enterprise skills, standardizing multi-tool connectivity across ecosystems.
+    \item \textbf{User-Centric Harness Multi-Surface Product:} Designed and shipped a modular agent platform exposed across four primary interaction surfaces: \textbf{Web Portal, Terminal CLI, VS Code Extension, and Client SDKs} for workspace-centric agent execution and user onboarding.
+    \item \textbf{Process Automation Harness (\$300M Deal):} Architected full-stack enterprise agentic workflows for a Tier-1 global telecom operator, boosting process efficiency by \textbf{40\%} and directly driving the acquisition of a \textbf{\$300M AI transformation deal}.
+    \item \textbf{16-Agent Production Pipeline:} Engineered an autonomous \textbf{16-agent pipeline} with 5 Human-in-the-Loop (HITL) checkpoints, delivering \textbf{95\% straight-through automation} across complex enterprise operations.
+    \item \textbf{Proprietary LLM Compiler:} Built an LLM execution optimizer (dynamic prompt planning, semantic caching, and tool routing) that slashed median query latency by \textbf{35\%} while preserving output accuracy.
+    \item \textbf{Contract Intelligence System:} Deployed automated contract comparison and clause-risk analysis agents across \textbf{5 enterprise clients}, reducing manual legal review time by \textbf{60\%}.
+\end{itemize}
+
+\textbf{Xcaliber Infotech --- Data Scientist / AI-ML Engineer} \hfill \textbf{Dec 2022 -- Dec 2024, Pune}
+\begin{itemize}
+    \item \textbf{Summarization Microservice:} Built a high-throughput text summarization microservice using \textbf{LLaMA, BART, spaCy, and PyTorch} to process OEM comments for delivery waivers, integrating with warehouse ERPs to improve inventory turnover.
+    \item \textbf{Enterprise RAG Chatbot:} Developed an enterprise conversational assistant using \textbf{LangChain, Hugging Face Transformers, ChromaDB, and Flask}, cutting internal document lookup times by \textbf{40\%}.
+    \item \textbf{Accessory Recommender:} Designed a collaborative affinity recommendation engine dynamically matching regional inventory with customer purchase patterns, boosting weekly accessory bundle sales by \textbf{25\%}.
+    \item \textbf{API \& Telemetry Layer:} Developed secure REST APIs and real-time operations dashboards for role-based analytics, audit tracking, and LLM feedback ingestion.
+\end{itemize}
+
+\textbf{Concentrix India --- Data Analyst} \hfill \textbf{Oct 2015 -- Apr 2017, Gurgaon}
+\begin{itemize}
+    \item \textbf{Analytics Pipelines:} Built automated Python and SQL ETL pipelines and executive reporting dashboards for operational analytics.
+    \item \textbf{Predictive Modeling:} Conducted statistical exploratory analysis, regression, and classification modeling to support business forecasting and workforce planning.
+\end{itemize}
+
+% Skills
+\section*{Skills}
+\begin{itemize}
+    \item \textbf{Foundations \& Agentic Systems:} gVisor Agent Sandboxing, Event-Log State Reconstruction, Model Context Protocol (MCP), Skill Authoring Platforms, Multi-Agent Orchestration (CrewAI, LangGraph, AutoGen), LLM Compilers, Semantic Caching, HITL Governance.
+    \item \textbf{Exposure Surfaces \& Tooling:} VS Code Extensions, CLI Tooling, Client SDKs, Web Portals, RESTful APIs, WebSocket Streaming.
+    \item \textbf{GenAI \& LLMs:} LLaMA 2/3, Mistral, GPT-4/Azure OpenAI, Hugging Face Transformers, BERT, RoBERTa, BART, LangChain, RAG Systems, Vector DBs (ChromaDB, Pinecone, FAISS, Redis), Guardrails \& LLM-as-a-judge.
+    \item \textbf{Machine Learning, NLP \& Data Science:} Scikit-Learn, PyTorch, TensorFlow, Keras, spaCy, NLTK, Word2Vec, TF-IDF, NER, Regression, Classification, Clustering, Time-Series Modeling.
+    \item \textbf{Languages, Cloud \& Infrastructure:} Python (NumPy, Pandas, Matplotlib), SQL (PostgreSQL, MySQL), FastAPI, Flask, Docker, Kubernetes, AWS (EC2, S3, SageMaker, Lambda), CI/CD Pipelines, Git/GitHub, Linux/gVisor.
+\end{itemize}
+
+% Education
+\section*{Education}
+\textbf{PG-Diploma in Artificial Intelligence (PGDAI)} --- CDAC, Pune, 2022\\[2pt]
+\textbf{B.Tech in Mechanical Engineering} --- JIET, Jind, 2014
+
+\end{document}

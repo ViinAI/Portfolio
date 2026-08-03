@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Vinay Kumar - Senior AI Engineer & Agentic Systems Architect</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&family=Latin+Modern+Roman&display=swap" rel="stylesheet">
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+    body {
+      background-color: #f4f4f6;
+      font-family: "Latin Modern Roman", "EB Garamond", "Times New Roman", Times, serif;
+      color: #111;
+      line-height: 1.25;
+      font-size: 9.3pt;
+      padding: 10px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    .actions-bar {
+      margin-bottom: 12px;
+      display: flex;
+      gap: 10px;
+    }
+    .btn {
+      padding: 7px 14px;
+      font-family: system-ui, -apple-system, sans-serif;
+      font-size: 13px;
+      font-weight: 500;
+      background: #0066cc;
+      color: #fff;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+      text-decoration: none;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    }
+    .btn:hover {
+      background: #0052a3;
+    }
+    .page {
+      background: #fff;
+      width: 210mm;
+      min-height: 297mm;
+      padding: 11mm 13mm;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+    }
+    header {
+      text-align: center;
+      margin-bottom: 8px;
+    }
+    h1 {
+      font-size: 21pt;
+      font-weight: 700;
+      letter-spacing: -0.4px;
+      margin-bottom: 1px;
+    }
+    .subtitle {
+      font-size: 11pt;
+      font-weight: 600;
+      color: #222;
+      margin-bottom: 2px;
+    }
+    .contact-line {
+      font-size: 9pt;
+      color: #333;
+    }
+    .contact-line a {
+      color: #0000ee;
+      text-decoration: underline;
+    }
+    .divider {
+      margin: 0 4px;
+    }
+    section {
+      margin-bottom: 7px;
+    }
+    h2 {
+      font-size: 10.2pt;
+      font-weight: 700;
+      text-transform: none;
+      border-bottom: 1px solid #111;
+      padding-bottom: 1px;
+      margin-bottom: 4px;
+    }
+    .summary-p {
+      text-align: justify;
+      margin-bottom: 4px;
+      font-size: 9.1pt;
+      line-height: 1.28;
+    }
+    .job-header {
+      display: flex;
+      justify-content: space-between;
+      font-weight: 700;
+      margin-top: 4px;
+      margin-bottom: 2px;
+      font-size: 9.2pt;
+    }
+    ul {
+      list-style-type: disc;
+      margin-left: 16px;
+      margin-bottom: 3px;
+    }
+    li {
+      margin-bottom: 1.5px;
+      text-align: justify;
+      font-size: 8.85pt;
+      line-height: 1.25;
+    }
+    .skills-ul li {
+      margin-bottom: 2px;
+    }
+    .education-item {
+      margin-bottom: 1.5px;
+      font-size: 8.9pt;
+    }
+    @media print {
+      body {
+        background: transparent;
+        padding: 0;
+      }
+      .actions-bar {
+        display: none;
+      }
+      .page {
+        width: 100%;
+        box-shadow: none;
+        padding: 0;
+        margin: 0;
+      }
+      @page {
+        size: A4;
+        margin: 8mm 10mm;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="actions-bar">
+    <button class="btn" onclick="window.print()">🖨️ Print / Save as PDF</button>
+  </div>
+
+  <div class="page">
+    <header>
+      <h1>Vinay Kumar</h1>
+      <div class="subtitle">Senior AI Engineer &amp; Agentic Systems Architect</div>
+      <div class="contact-line">
+        Pune, India <span class="divider">—</span> 9992394789 <span class="divider">—</span> <a href="mailto:viinaimadotra@gmail.com">viinaimadotra@gmail.com</a><br>
+        <a href="https://www.linkedin.com/in/viinai" target="_blank">LinkedIn</a> <span class="divider">|</span> <a href="https://github.com/ViinAI" target="_blank">GitHub</a>
+      </div>
+    </header>
+
+    <section>
+      <h2>Professional Summary</h2>
+      <p class="summary-p">
+        Senior AI Engineer and Architect with <strong>5.5+ years of experience across Data Science, Predictive Analytics, and Enterprise Agentic AI Platforms</strong>. Proven track record designing foundational AI infrastructure (<strong>gVisor secure sandboxes, event-log execution harnesses, and Model Context Protocol/MCP platforms</strong>) and scaling production products across <strong>Process Automation</strong> (driving a $300M Telecom transformation deal with a 16-agent HITL pipeline) and <strong>User-Centric Harnesses</strong> exposed via <strong>Web, CLI, VS Code Extension, and SDKs</strong>.
+      </p>
+    </section>
+
+    <section>
+      <h2>Professional Experience</h2>
+
+      <div class="job-header">
+        <span>Infosys — Senior Data Scientist / AI Engineer</span>
+        <span>Dec 2024 – Present</span>
+      </div>
+      <ul>
+        <li><strong>Foundational Sandbox Platform:</strong> Architected a DeepAgent-compatible execution sandbox leveraging <strong>gVisor</strong>, enforcing microVM-level isolation, deterministic reproducibility, and strict security governance for untrusted agent code, MCP servers, and dynamic skills.</li>
+        <li><strong>Event-Driven Execution Harness:</strong> Engineered a core agent execution runtime featuring <strong>event-log-driven state reconstruction, dynamic context projection, checkpointing, and long-running workflow continuity</strong> for complete observability and auditability.</li>
+        <li><strong>MCP Platform &amp; Skill Engine:</strong> Built an AI-assisted authoring, registration, validation, and lifecycle onboarding portal for <strong>Model Context Protocol (MCP) servers</strong> and reusable enterprise skills, standardizing multi-tool connectivity across ecosystems.</li>
+        <li><strong>User-Centric Harness Multi-Surface Product:</strong> Designed and shipped a modular agent platform exposed across four primary interaction surfaces: <strong>Web Portal, Terminal CLI, VS Code Extension, and Client SDKs</strong> for workspace-centric agent execution and user onboarding.</li>
+        <li><strong>Process Automation Harness ($300M Deal):</strong> Architected full-stack enterprise agentic workflows for a Tier-1 global telecom operator, boosting process efficiency by <strong>40%</strong> and directly driving the acquisition of a <strong>$300M AI transformation deal</strong>.</li>
+        <li><strong>16-Agent Production Pipeline:</strong> Engineered an autonomous <strong>16-agent pipeline</strong> with 5 Human-in-the-Loop (HITL) checkpoints, delivering <strong>95% straight-through automation</strong> across complex enterprise operations.</li>
+        <li><strong>Proprietary LLM Compiler:</strong> Built an LLM execution optimizer (dynamic prompt planning, semantic caching, and tool routing) that slashed median query latency by <strong>35%</strong> while preserving output accuracy.</li>
+        <li><strong>Contract Intelligence System:</strong> Deployed automated contract comparison and clause-risk analysis agents across <strong>5 enterprise clients</strong>, reducing manual legal review time by <strong>60%</strong>.</li>
+      </ul>
+
+      <div class="job-header">
+        <span>Xcaliber Infotech — Data Scientist / AI-ML Engineer</span>
+        <span>Dec 2022 – Dec 2024, Pune</span>
+      </div>
+      <ul>
+        <li><strong>Summarization Microservice:</strong> Built a high-throughput text summarization microservice using <strong>LLaMA, BART, spaCy, and PyTorch</strong> to process OEM comments for delivery waivers, integrating with warehouse ERPs to improve inventory turnover.</li>
+        <li><strong>Enterprise RAG Chatbot:</strong> Developed an enterprise conversational assistant using <strong>LangChain, Hugging Face Transformers, ChromaDB, and Flask</strong>, cutting internal document lookup times by <strong>40%</strong>.</li>
+        <li><strong>Accessory Recommender:</strong> Designed a collaborative affinity recommendation engine dynamically matching regional inventory with customer purchase patterns, boosting weekly accessory bundle sales by <strong>25%</strong>.</li>
+        <li><strong>API &amp; Telemetry Layer:</strong> Developed secure REST APIs and real-time operations dashboards for role-based analytics, audit tracking, and LLM feedback ingestion.</li>
+      </ul>
+
+      <div class="job-header">
+        <span>Concentrix India — Data Analyst</span>
+        <span>Oct 2015 – Apr 2017, Gurgaon</span>
+      </div>
+      <ul>
+        <li><strong>Analytics Pipelines:</strong> Built automated Python and SQL ETL pipelines and executive reporting dashboards for operational analytics.</li>
+        <li><strong>Predictive Modeling:</strong> Conducted statistical exploratory analysis, regression, and classification modeling to support business forecasting and workforce planning.</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>Skills</h2>
+      <ul class="skills-ul">
+        <li><strong>Foundations &amp; Agentic Systems:</strong> gVisor Agent Sandboxing, Event-Log State Reconstruction, Model Context Protocol (MCP), Skill Authoring Platforms, Multi-Agent Orchestration (CrewAI, LangGraph, AutoGen), LLM Compilers, Semantic Caching, HITL Governance.</li>
+        <li><strong>Exposure Surfaces &amp; Tooling:</strong> VS Code Extensions, CLI Tooling, Client SDKs, Web Portals, RESTful APIs, WebSocket Streaming.</li>
+        <li><strong>GenAI &amp; LLMs:</strong> LLaMA 2/3, Mistral, GPT-4/Azure OpenAI, Hugging Face Transformers, BERT, RoBERTa, BART, LangChain, RAG Systems, Vector DBs (ChromaDB, Pinecone, FAISS, Redis), Guardrails &amp; LLM-as-a-judge.</li>
+        <li><strong>Machine Learning, NLP &amp; Data Science:</strong> Scikit-Learn, PyTorch, TensorFlow, Keras, spaCy, NLTK, Word2Vec, TF-IDF, NER, Regression, Classification, Clustering, Time-Series Modeling.</li>
+        <li><strong>Languages, Cloud &amp; Infrastructure:</strong> Python (NumPy, Pandas, Matplotlib), SQL (PostgreSQL, MySQL), FastAPI, Flask, Docker, Kubernetes, AWS (EC2, S3, SageMaker, Lambda), CI/CD Pipelines, Git/GitHub, Linux/gVisor.</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>Education</h2>
+      <div class="education-item"><strong>PG-Diploma in Artificial Intelligence (PGDAI)</strong> — CDAC, Pune, 2022</div>
+      <div class="education-item"><strong>B.Tech in Mechanical Engineering</strong> — JIET, Jind, 2014</div>
+    </section>
+  </div>
+
+</body>
+</html>

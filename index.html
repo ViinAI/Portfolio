@@ -1,0 +1,733 @@
+<!DOCTYPE html>
+<html lang="en" class="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Vinay Kumar - Senior AI Engineer & Agentic Systems Architect. Specializing in gVisor Sandboxes, Event-Driven Agent Harnesses, MCP Platforms, and Enterprise GenAI Systems.">
+  <meta name="author" content="Vinay Kumar">
+  <title>Vinay Kumar | Senior AI Engineer & Agentic Systems Architect</title>
+  
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;700&family=Outfit:wght@400;500;600;700;800&family=EB+Garamond:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+  
+  <!-- FontAwesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- Background Canvas for Neural Particle Simulation -->
+  <canvas id="neural-canvas"></canvas>
+
+  <!-- Sticky Glass Navigation -->
+  <nav class="navbar" id="navbar">
+    <div class="nav-container">
+      <a href="#hero" class="nav-logo">
+        <span class="logo-bracket">&lt;</span><span class="logo-name">Vinay</span><span class="logo-accent">.AI</span><span class="logo-bracket">/&gt;</span>
+      </a>
+
+      <div class="nav-links" id="nav-links">
+        <a href="#foundations" class="nav-link">Foundations</a>
+        <a href="#products" class="nav-link">Products</a>
+        <a href="#compiler" class="nav-link">LLM Compiler</a>
+        <a href="#pipeline" class="nav-link">16-Agent Workflow</a>
+        <a href="#experience" class="nav-link">Experience</a>
+        <a href="#skills" class="nav-link">Skills</a>
+        <a href="#resume-section" class="nav-link">Resume</a>
+        <a href="#contact" class="nav-link btn-nav-cta">Contact</a>
+      </div>
+
+      <div class="nav-mobile-toggle" id="mobile-toggle">
+        <i class="fas fa-bars"></i>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <section id="hero" class="hero-section">
+    <div class="hero-container">
+      <div class="hero-badge">
+        <span class="pulse-dot"></span>
+        <span>Senior AI Engineer &amp; Agentic Systems Architect • Infosys Topaz</span>
+      </div>
+
+      <h1 class="hero-title">
+        Architecting <span class="gradient-text">Enterprise Agentic Platforms</span> &amp; Autonomous AI Ecosystems
+      </h1>
+
+      <p class="hero-subtitle">
+        <strong>5.5+ years of experience</strong> across Data Science, Predictive Analytics, and Foundational AI Infrastructure. Creator of <strong>gVisor secure sandboxes</strong>, <strong>event-log execution harnesses</strong>, and <strong>Model Context Protocol (MCP) platforms</strong> powering enterprise multi-agent workflows.
+      </p>
+
+      <div class="hero-highlights-grid">
+        <div class="hero-stat-card">
+          <div class="stat-number gradient-text">$300M</div>
+          <div class="stat-label">Telecom AI Transformation Deal</div>
+        </div>
+        <div class="hero-stat-card">
+          <div class="stat-number gradient-text">16-Agent</div>
+          <div class="stat-label">Production Autonomous Pipeline</div>
+        </div>
+        <div class="hero-stat-card">
+          <div class="stat-number gradient-text">-35%</div>
+          <div class="stat-label">LLM Latency via Custom Compiler</div>
+        </div>
+        <div class="hero-stat-card">
+          <div class="stat-number gradient-text">95%</div>
+          <div class="stat-label">Straight-Through Automation</div>
+        </div>
+      </div>
+
+      <div class="hero-actions">
+        <a href="#foundations" class="btn btn-primary">
+          <i class="fas fa-microchip"></i> Explore Platform Architecture
+        </a>
+        <a href="resume.html" target="_blank" class="btn btn-secondary">
+          <i class="fas fa-file-alt"></i> View LaTeX CV
+        </a>
+        <a href="https://github.com/ViinAI" target="_blank" class="btn btn-glass">
+          <i class="fab fa-github"></i> GitHub
+        </a>
+        <a href="https://www.linkedin.com/in/viinai" target="_blank" class="btn btn-glass">
+          <i class="fab fa-linkedin"></i> LinkedIn
+        </a>
+      </div>
+
+      <!-- Live Terminal Widget -->
+      <div class="terminal-container">
+        <div class="terminal-header">
+          <div class="terminal-dots">
+            <span class="dot red"></span>
+            <span class="dot yellow"></span>
+            <span class="dot green"></span>
+          </div>
+          <div class="terminal-title">vinay@agent-runtime: ~ (gVisor Isolated Sandbox)</div>
+          <div class="terminal-tag"><i class="fas fa-shield-alt"></i> Sandbox Active</div>
+        </div>
+        <div class="terminal-body" id="terminal-output">
+          <div class="terminal-line"><span class="prompt">$</span> <span class="cmd">deepagent-runtime --status</span></div>
+          <div class="terminal-line text-cyan">✓ gVisor microVM sandbox initialized [PID 4092, isolation=enforced]</div>
+          <div class="terminal-line text-cyan">✓ Event-log harness connected: stream_id="telecom-ops-prod-01"</div>
+          <div class="terminal-line text-cyan">✓ MCP server pool active: 7 tools registered, 5 HITL checkpoints live</div>
+          <div class="terminal-line text-green">✓ LLM Compiler active: semantic cache hit rate 42.8%, median latency 805ms</div>
+          <div class="terminal-line"><span class="prompt">$</span> <span class="cursor">_</span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Section 1: Foundational Platform Components -->
+  <section id="foundations" class="section">
+    <div class="section-container">
+      <div class="section-header text-center">
+        <div class="section-badge"><i class="fas fa-layer-group"></i> Core Architecture</div>
+        <h2 class="section-title">Foundational Platform Components</h2>
+        <p class="section-subtitle">The foundational infrastructure enabling secure, reproducible, and observable agentic AI.</p>
+      </div>
+
+      <div class="foundations-grid">
+        <!-- Component 1: Sandbox -->
+        <div class="glass-card foundation-card">
+          <div class="card-icon-wrapper cyan-glow">
+            <i class="fas fa-box-open"></i>
+          </div>
+          <div class="card-tag">Isolation &amp; Security</div>
+          <h3 class="card-title">gVisor DeepAgent Sandbox</h3>
+          <p class="card-description">
+            A DeepAgent-compatible execution sandbox leveraging <strong>gVisor</strong> microVM kernel interception. Enforces strict hardware-level isolation, deterministic reproducibility, and enterprise security guardrails for executing untrusted agent code, MCP servers, and dynamic skills.
+          </p>
+          <ul class="card-feature-list">
+            <li><i class="fas fa-check-circle text-cyan"></i> Syscall filtering &amp; container-level isolation</li>
+            <li><i class="fas fa-check-circle text-cyan"></i> Ephemeral filesystem &amp; memory boundary control</li>
+            <li><i class="fas fa-check-circle text-cyan"></i> Safe execution of arbitrary multi-agent code</li>
+          </ul>
+          <div class="card-metrics">
+            <span class="metric-chip">gVisor</span>
+            <span class="metric-chip">Linux Namespaces</span>
+            <span class="metric-chip">Zero-Trust</span>
+          </div>
+        </div>
+
+        <!-- Component 2: Harness -->
+        <div class="glass-card foundation-card">
+          <div class="card-icon-wrapper violet-glow">
+            <i class="fas fa-network-wired"></i>
+          </div>
+          <div class="card-tag">Runtime &amp; Telemetry</div>
+          <h3 class="card-title">Event-Log Execution Harness</h3>
+          <p class="card-description">
+            A resilient agent execution engine engineered around <strong>event-log-driven state reconstruction</strong>, dynamic context projection, checkpointing, and uninterrupted long-running workflow continuity across distributed agent instances.
+          </p>
+          <ul class="card-feature-list">
+            <li><i class="fas fa-check-circle text-violet"></i> Deterministic state replay &amp; recovery</li>
+            <li><i class="fas fa-check-circle text-violet"></i> Token-efficient dynamic context projection</li>
+            <li><i class="fas fa-check-circle text-violet"></i> End-to-end execution auditability &amp; logs</li>
+          </ul>
+          <div class="card-metrics">
+            <span class="metric-chip">Event Sourcing</span>
+            <span class="metric-chip">State Machines</span>
+            <span class="metric-chip">Observability</span>
+          </div>
+        </div>
+
+        <!-- Component 3: MCP Platform -->
+        <div class="glass-card foundation-card">
+          <div class="card-icon-wrapper green-glow">
+            <i class="fas fa-plug"></i>
+          </div>
+          <div class="card-tag">Tooling &amp; Interop</div>
+          <h3 class="card-title">MCP Platform &amp; Skill Engine</h3>
+          <p class="card-description">
+            An AI-assisted authoring, registration, validation, and lifecycle onboarding portal for <strong>Model Context Protocol (MCP) servers</strong> and reusable enterprise skills, eliminating integration friction and standardizing enterprise tool connectivity.
+          </p>
+          <ul class="card-feature-list">
+            <li><i class="fas fa-check-circle text-green"></i> Guided MCP server registration &amp; testing</li>
+            <li><i class="fas fa-check-circle text-green"></i> Automated skill dependency packaging</li>
+            <li><i class="fas fa-check-circle text-green"></i> Standardized JSON-RPC protocol compliance</li>
+          </ul>
+          <div class="card-metrics">
+            <span class="metric-chip">Model Context Protocol</span>
+            <span class="metric-chip">JSON-RPC</span>
+            <span class="metric-chip">Skill Packaging</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Section 2: Products & Exposure Surfaces -->
+  <section id="products" class="section dark-bg">
+    <div class="section-container">
+      <div class="section-header text-center">
+        <div class="section-badge"><i class="fas fa-cubes"></i> Product Ecosystem</div>
+        <h2 class="section-title">Products Built On Foundational Architecture</h2>
+        <p class="section-subtitle">Scaling foundational harnesses into production process engines and developer interfaces.</p>
+      </div>
+
+      <!-- Product 1: User-Centric Multi-Surface Harness -->
+      <div class="product-showcase-box glass-card mb-40">
+        <div class="product-header">
+          <div class="product-badge-group">
+            <span class="badge-pill cyan-badge">Product 01</span>
+            <span class="badge-pill">Multi-Surface Exposure</span>
+          </div>
+          <h3 class="product-title">User-Centric Agent Harness</h3>
+          <p class="product-intro">
+            A modular workspace-centric platform exposing foundational agent capabilities seamlessly across <strong>4 primary developer and operational surfaces</strong>:
+          </p>
+        </div>
+
+        <div class="surfaces-grid">
+          <div class="surface-item">
+            <div class="surface-icon"><i class="fas fa-globe"></i></div>
+            <div class="surface-name">Web Portal</div>
+            <p class="surface-desc">Interactive dashboard for agent orchestration, live telemetry, workflow monitoring, and HITL approvals.</p>
+          </div>
+          <div class="surface-item">
+            <div class="surface-icon"><i class="fas fa-terminal"></i></div>
+            <div class="surface-name">CLI Tooling</div>
+            <p class="surface-desc">Developer-first terminal command line for local execution, environment provisioning, and automated pipelines.</p>
+          </div>
+          <div class="surface-item">
+            <div class="surface-icon"><i class="fas fa-code"></i></div>
+            <div class="surface-name">VS Code Extension</div>
+            <p class="surface-desc">Native IDE integration allowing engineers to interact with agents, author skills, and inspect logs right from their editor.</p>
+          </div>
+          <div class="surface-item">
+            <div class="surface-icon"><i class="fas fa-puzzle-piece"></i></div>
+            <div class="surface-name">Client SDKs</div>
+            <p class="surface-desc">Python &amp; TypeScript SDKs for programmatic agent dispatch, custom tool hooks, and event-log subscription.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Product 2: Process Automation Harness -->
+      <div class="product-showcase-box glass-card">
+        <div class="product-header">
+          <div class="product-badge-group">
+            <span class="badge-pill violet-badge">Product 02</span>
+            <span class="badge-pill">$300M Deal Engine</span>
+          </div>
+          <h3 class="product-title">Process Automation Harness (Telecom &amp; Enterprise)</h3>
+          <p class="product-intro">
+            High-throughput enterprise process execution system engineered to automate complex multi-stakeholder workflows with strict governance.
+          </p>
+        </div>
+
+        <div class="process-metrics-row">
+          <div class="p-metric-card">
+            <div class="p-val gradient-text">40%</div>
+            <div class="p-label">Efficiency Boost in Tier-1 Telecom</div>
+          </div>
+          <div class="p-metric-card">
+            <div class="p-val gradient-text">95%</div>
+            <div class="p-label">Straight-Through Automation</div>
+          </div>
+          <div class="p-metric-card">
+            <div class="p-val gradient-text">5 HITL</div>
+            <div class="p-label">Safety &amp; Compliance Checkpoints</div>
+          </div>
+          <div class="p-metric-card">
+            <div class="p-val gradient-text">60%</div>
+            <div class="p-label">Contract Review Time Reduction</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Section 3: Interactive LLM Compiler Benchmark -->
+  <section id="compiler" class="section">
+    <div class="section-container">
+      <div class="section-header text-center">
+        <div class="section-badge"><i class="fas fa-bolt"></i> Performance Engineering</div>
+        <h2 class="section-title">Proprietary LLM Compiler &amp; Optimizer</h2>
+        <p class="section-subtitle">Slashing median query latency by 35% via prompt planning, semantic caching, and dynamic tool orchestration.</p>
+      </div>
+
+      <div class="compiler-interactive-card glass-card">
+        <div class="compiler-controls">
+          <div class="control-group">
+            <label for="prompt-select">Select Test Scenario:</label>
+            <select id="prompt-select" class="custom-select">
+              <option value="contract">Multi-Clause Contract Audit (15k tokens)</option>
+              <option value="telecom">Telecom Network Route Remediation</option>
+              <option value="rag">Enterprise RAG Multi-Doc Synthesis</option>
+            </select>
+          </div>
+          <button id="run-benchmark-btn" class="btn btn-primary">
+            <i class="fas fa-play"></i> Run Benchmark Simulation
+          </button>
+        </div>
+
+        <div class="benchmark-comparison-grid">
+          <!-- Standard Flow -->
+          <div class="benchmark-col standard-col">
+            <div class="col-header">
+              <h4>Traditional LLM Pipeline</h4>
+              <span class="badge-raw">Unoptimized</span>
+            </div>
+            <div class="pipeline-steps">
+              <div class="p-step">1. Raw Context Loading <span class="step-time">~180ms</span></div>
+              <div class="p-step">2. Uncompressed Prompt Assembly <span class="step-time">~120ms</span></div>
+              <div class="p-step">3. Direct Model API Dispatch <span class="step-time">~840ms</span></div>
+              <div class="p-step">4. Sequential Tool Invocation <span class="step-time">~320ms</span></div>
+            </div>
+            <div class="total-latency-box">
+              <div class="latency-label">Total Execution Time:</div>
+              <div class="latency-val" id="std-latency">1,460 ms</div>
+            </div>
+          </div>
+
+          <!-- Compiler Flow -->
+          <div class="benchmark-col compiler-col">
+            <div class="col-header">
+              <h4>Vinay's LLM Compiler</h4>
+              <span class="badge-opt">Compiled &amp; Optimized</span>
+            </div>
+            <div class="pipeline-steps">
+              <div class="p-step opt">1. Vector Semantic Cache Check <span class="step-time text-green">~12ms</span></div>
+              <div class="p-step opt">2. Dynamic Prompt Planning &amp; Pruning <span class="step-time text-green">~45ms</span></div>
+              <div class="p-step opt">3. Speculative Tool Routing <span class="step-time text-green">~520ms</span></div>
+              <div class="p-step opt">4. Async Context Stream Output <span class="step-time text-green">~228ms</span></div>
+            </div>
+            <div class="total-latency-box opt-box">
+              <div class="latency-label">Optimized Execution Time:</div>
+              <div class="latency-val text-green" id="opt-latency">805 ms (-44.8%)</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="compiler-features-bar">
+          <div class="c-feat"><i class="fas fa-check text-cyan"></i> Dynamic Prompt Planning</div>
+          <div class="c-feat"><i class="fas fa-check text-cyan"></i> Semantic Vector Caching</div>
+          <div class="c-feat"><i class="fas fa-check text-cyan"></i> Speculative Parallel Tool Calls</div>
+          <div class="c-feat"><i class="fas fa-check text-cyan"></i> Token Compression</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Section 4: 16-Agent Production Pipeline Visualizer -->
+  <section id="pipeline" class="section dark-bg">
+    <div class="section-container">
+      <div class="section-header text-center">
+        <div class="section-badge"><i class="fas fa-project-diagram"></i> Autonomous Workflows</div>
+        <h2 class="section-title">Production 16-Agent Autonomous Pipeline</h2>
+        <p class="section-subtitle">Multi-agent architecture with 5 Human-in-the-Loop (HITL) checkpoints delivering 95% straight-through automation.</p>
+      </div>
+
+      <div class="pipeline-flow-container glass-card">
+        <div class="pipeline-stages-wrapper">
+          
+          <!-- Stage 1: Ingestion & Intent -->
+          <div class="stage-block">
+            <div class="stage-header">
+              <div class="stage-num">01</div>
+              <div class="stage-title">Ingestion &amp; Intent</div>
+            </div>
+            <div class="agent-nodes">
+              <div class="agent-node" data-agent="Ingestion Agent"><i class="fas fa-file-import"></i> Document Ingestion Agent</div>
+              <div class="agent-node" data-agent="Classification Agent"><i class="fas fa-tags"></i> Intent Classifier Agent</div>
+              <div class="agent-node" data-agent="Schema Validator"><i class="fas fa-check-double"></i> Schema Validator Agent</div>
+            </div>
+            <div class="hitl-checkpoint">
+              <i class="fas fa-user-shield"></i> HITL 1: Intent &amp; Scope Verification
+            </div>
+          </div>
+
+          <!-- Connector -->
+          <div class="stage-arrow"><i class="fas fa-chevron-right"></i></div>
+
+          <!-- Stage 2: Decomposition & Retrieval -->
+          <div class="stage-block">
+            <div class="stage-header">
+              <div class="stage-num">02</div>
+              <div class="stage-title">Decomposition &amp; RAG</div>
+            </div>
+            <div class="agent-nodes">
+              <div class="agent-node" data-agent="Planner Agent"><i class="fas fa-sitemap"></i> Task Planner Agent</div>
+              <div class="agent-node" data-agent="Vector Query Agent"><i class="fas fa-database"></i> Vector Retrieval Agent</div>
+              <div class="agent-node" data-agent="Entity Resolver"><i class="fas fa-fingerprint"></i> Entity Resolution Agent</div>
+              <div class="agent-node" data-agent="Clause Extractor"><i class="fas fa-quote-right"></i> Clause Extractor Agent</div>
+            </div>
+            <div class="hitl-checkpoint">
+              <i class="fas fa-user-shield"></i> HITL 2: Policy &amp; Constraint Review
+            </div>
+          </div>
+
+          <!-- Connector -->
+          <div class="stage-arrow"><i class="fas fa-chevron-right"></i></div>
+
+          <!-- Stage 3: Execution & Synthesis -->
+          <div class="stage-block">
+            <div class="stage-header">
+              <div class="stage-num">03</div>
+              <div class="stage-title">Execution &amp; Synthesis</div>
+            </div>
+            <div class="agent-nodes">
+              <div class="agent-node" data-agent="Domain Logic Agent"><i class="fas fa-cogs"></i> Domain Logic Engine</div>
+              <div class="agent-node" data-agent="Risk Scorer"><i class="fas fa-chart-line"></i> Risk Assessment Agent</div>
+              <div class="agent-node" data-agent="Deviation Analyzer"><i class="fas fa-not-equal"></i> Deviation Analyzer Agent</div>
+              <div class="agent-node" data-agent="Summary Synthesizer"><i class="fas fa-align-left"></i> Summary Synthesizer</div>
+            </div>
+            <div class="hitl-checkpoint">
+              <i class="fas fa-user-shield"></i> HITL 3: Threshold Exceedance Approval
+            </div>
+          </div>
+
+          <!-- Connector -->
+          <div class="stage-arrow"><i class="fas fa-chevron-right"></i></div>
+
+          <!-- Stage 4: Guardrails & Action -->
+          <div class="stage-block">
+            <div class="stage-header">
+              <div class="stage-num">04</div>
+              <div class="stage-title">Guardrails &amp; Dispatch</div>
+            </div>
+            <div class="agent-nodes">
+              <div class="agent-node" data-agent="Safety Guardrail"><i class="fas fa-shield-virus"></i> Safety &amp; PII Guardrail</div>
+              <div class="agent-node" data-agent="LLM Judge Evaluator"><i class="fas fa-balance-scale"></i> LLM-as-a-Judge Evaluator</div>
+              <div class="agent-node" data-agent="ERP Dispatcher"><i class="fas fa-cloud-upload-alt"></i> ERP Integration Dispatcher</div>
+              <div class="agent-node" data-agent="Telemetry Agent"><i class="fas fa-clipboard-list"></i> Telemetry &amp; Audit Logger</div>
+            </div>
+            <div class="hitl-checkpoint">
+              <i class="fas fa-user-shield"></i> HITL 4 &amp; 5: Final Authorization &amp; Release
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Section 5: Professional Experience Timeline -->
+  <section id="experience" class="section">
+    <div class="section-container">
+      <div class="section-header text-center">
+        <div class="section-badge"><i class="fas fa-briefcase"></i> Career Journey</div>
+        <h2 class="section-title">Professional Experience</h2>
+        <p class="section-subtitle">5.5+ years of continuous advancement across Data Science, Machine Learning, and Enterprise GenAI Platforms.</p>
+      </div>
+
+      <div class="timeline">
+        
+        <!-- Experience 1: Infosys Topaz -->
+        <div class="timeline-item">
+          <div class="timeline-dot current"></div>
+          <div class="timeline-content glass-card">
+            <div class="timeline-header-row">
+              <div>
+                <h3 class="timeline-role">Senior AI Engineer / Senior Data Scientist</h3>
+                <h4 class="timeline-company"><span class="company-name">Infosys Topaz (Generative AI Core)</span> • Pune, India</h4>
+              </div>
+              <div class="timeline-badge-date">Dec 2024 – Present</div>
+            </div>
+            <div class="timeline-body">
+              <p class="timeline-lead">Architecting foundational agent execution platforms, gVisor sandboxes, and enterprise multi-agent workflows.</p>
+              <ul class="timeline-bullets">
+                <li><strong>Foundational Sandbox Platform:</strong> Built gVisor-based DeepAgent sandbox enforcing microVM isolation and reproducible execution for agent code and MCP servers.</li>
+                <li><strong>Event-Driven Execution Harness:</strong> Engineered event-log runtime with state reconstruction, dynamic context projection, and workflow continuity.</li>
+                <li><strong>MCP Platform &amp; Skill Engine:</strong> Created AI-assisted authoring, testing, and lifecycle onboarding portal for Model Context Protocol servers.</li>
+                <li><strong>User-Centric Multi-Surface Harness:</strong> Delivered modular agent platform across 4 surfaces: Web Portal, Terminal CLI, VS Code Extension, and SDKs.</li>
+                <li><strong>$300M Telecom Deal &amp; 16-Agent Pipeline:</strong> Spearheaded full-stack agentic workflows delivering 40% efficiency gains and 95% straight-through automation.</li>
+                <li><strong>LLM Compiler:</strong> Slashed median inference latency by 35% with dynamic prompt planning and semantic vector caching.</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <!-- Experience 2: Xcaliber Infotech -->
+        <div class="timeline-item">
+          <div class="timeline-dot"></div>
+          <div class="timeline-content glass-card">
+            <div class="timeline-header-row">
+              <div>
+                <h3 class="timeline-role">Data Scientist / AI-ML Engineer</h3>
+                <h4 class="timeline-company"><span class="company-name">Xcaliber Infotech (A Phoenix Group Company)</span> • Pune, India</h4>
+              </div>
+              <div class="timeline-badge-date">Dec 2022 – Dec 2024</div>
+            </div>
+            <div class="timeline-body">
+              <ul class="timeline-bullets">
+                <li><strong>LLaMA &amp; BART Summarization Engine:</strong> Built high-throughput NLP microservice using LLaMA, BART, spaCy, and PyTorch for inventory-delivery waivers.</li>
+                <li><strong>Enterprise RAG Assistant:</strong> Deployed conversational assistant using LangChain, ChromaDB, Hugging Face Transformers, and Flask, cutting lookup time by 40%.</li>
+                <li><strong>Accessory Recommender:</strong> Engineered location-aware affinity recommender boosting weekly bundle sales by 25%.</li>
+                <li><strong>Telemetry &amp; API Layer:</strong> Developed secure REST APIs and real-time operations dashboards for role-based analytics.</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <!-- Experience 3: Concentrix India -->
+        <div class="timeline-item">
+          <div class="timeline-dot"></div>
+          <div class="timeline-content glass-card">
+            <div class="timeline-header-row">
+              <div>
+                <h3 class="timeline-role">Data Analyst</h3>
+                <h4 class="timeline-company"><span class="company-name">Concentrix India</span> • Gurgaon, India</h4>
+              </div>
+              <div class="timeline-badge-date">Oct 2015 – Apr 2017</div>
+            </div>
+            <div class="timeline-body">
+              <ul class="timeline-bullets">
+                <li><strong>Data Pipelines &amp; Analytics:</strong> Built automated Python and SQL ETL pipelines and executive reporting dashboards.</li>
+                <li><strong>Predictive Modeling:</strong> Performed exploratory analysis, regression, and classification modeling to support business reporting and KPI forecasting.</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <!-- Education Entry -->
+        <div class="timeline-item">
+          <div class="timeline-dot edu-dot"></div>
+          <div class="timeline-content glass-card">
+            <div class="timeline-header-row">
+              <div>
+                <h3 class="timeline-role">Education &amp; Credentials</h3>
+                <h4 class="timeline-company">C-DAC Pune &amp; JIET</h4>
+              </div>
+              <div class="timeline-badge-date">Foundations</div>
+            </div>
+            <div class="timeline-body">
+              <ul class="timeline-bullets">
+                <li><strong>PG-Diploma in Artificial Intelligence (PGDAI)</strong> — Centre for Development of Advanced Computing (C-DAC), Pune (2022)</li>
+                <li><strong>Bachelor of Technology (B.Tech) in Mechanical Engineering</strong> — JIET, Jind (2014)</li>
+                <li><strong>Certifications:</strong> Data Manipulation in SQL • Data Manipulation with Pandas</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Section 6: Technical Skills Taxonomy -->
+  <section id="skills" class="section dark-bg">
+    <div class="section-container">
+      <div class="section-header text-center">
+        <div class="section-badge"><i class="fas fa-tools"></i> Skill Taxonomy</div>
+        <h2 class="section-title">Technical Expertise</h2>
+        <p class="section-subtitle">Deep proficiency spanning AI platforms, LLMs, data science, and cloud infrastructure.</p>
+      </div>
+
+      <div class="skills-grid">
+        
+        <div class="skill-category glass-card">
+          <div class="skill-cat-header">
+            <i class="fas fa-brain text-cyan"></i>
+            <h3>Foundations &amp; Agentic AI</h3>
+          </div>
+          <div class="skill-tags">
+            <span class="skill-tag">gVisor Sandboxing</span>
+            <span class="skill-tag">Event-Log State Machines</span>
+            <span class="skill-tag">Model Context Protocol (MCP)</span>
+            <span class="skill-tag">Skill Authoring Engines</span>
+            <span class="skill-tag">CrewAI / LangGraph / AutoGen</span>
+            <span class="skill-tag">LLM Compilers</span>
+            <span class="skill-tag">Semantic Caching</span>
+            <span class="skill-tag">HITL Governance</span>
+          </div>
+        </div>
+
+        <div class="skill-category glass-card">
+          <div class="skill-cat-header">
+            <i class="fas fa-desktop text-violet"></i>
+            <h3>Exposure Surfaces &amp; Tooling</h3>
+          </div>
+          <div class="skill-tags">
+            <span class="skill-tag">VS Code Extensions</span>
+            <span class="skill-tag">CLI Tooling</span>
+            <span class="skill-tag">Client SDKs (Python/TS)</span>
+            <span class="skill-tag">Web Portals</span>
+            <span class="skill-tag">RESTful APIs</span>
+            <span class="skill-tag">WebSocket Streaming</span>
+            <span class="skill-tag">Git / GitHub Actions</span>
+          </div>
+        </div>
+
+        <div class="skill-category glass-card">
+          <div class="skill-cat-header">
+            <i class="fas fa-microchip text-green"></i>
+            <h3>GenAI &amp; LLM Engineering</h3>
+          </div>
+          <div class="skill-tags">
+            <span class="skill-tag">LLaMA 2/3</span>
+            <span class="skill-tag">Mistral</span>
+            <span class="skill-tag">GPT-4 / Azure OpenAI</span>
+            <span class="skill-tag">Transformers (BERT, BART, RoBERTa)</span>
+            <span class="skill-tag">LangChain</span>
+            <span class="skill-tag">RAG Architectures</span>
+            <span class="skill-tag">Vector DBs (ChromaDB, Pinecone, FAISS)</span>
+            <span class="skill-tag">LLM-as-a-Judge</span>
+          </div>
+        </div>
+
+        <div class="skill-category glass-card">
+          <div class="skill-cat-header">
+            <i class="fas fa-chart-pie text-yellow"></i>
+            <h3>Data Science &amp; Machine Learning</h3>
+          </div>
+          <div class="skill-tags">
+            <span class="skill-tag">Python (NumPy, Pandas, Scipy)</span>
+            <span class="skill-tag">PyTorch &amp; TensorFlow</span>
+            <span class="skill-tag">Scikit-learn</span>
+            <span class="skill-tag">NLP (spaCy, NLTK, Word2Vec, TF-IDF)</span>
+            <span class="skill-tag">Regression &amp; Classification</span>
+            <span class="skill-tag">Clustering &amp; Time Series</span>
+            <span class="skill-tag">SQL &amp; Database Modeling</span>
+          </div>
+        </div>
+
+        <div class="skill-category glass-card">
+          <div class="skill-cat-header">
+            <i class="fas fa-cloud text-pink"></i>
+            <h3>Cloud, DevOps &amp; Infrastructure</h3>
+          </div>
+          <div class="skill-tags">
+            <span class="skill-tag">AWS (EC2, S3, SageMaker, Lambda)</span>
+            <span class="skill-tag">Docker Containers</span>
+            <span class="skill-tag">Kubernetes</span>
+            <span class="skill-tag">Linux / POSIX (gVisor, MSYS2)</span>
+            <span class="skill-tag">FastAPI &amp; Flask</span>
+            <span class="skill-tag">CI/CD Automation</span>
+            <span class="skill-tag">MLOps / LLMOps</span>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Section 7: Resume Preview & Overleaf Source -->
+  <section id="resume-section" class="section">
+    <div class="section-container">
+      <div class="section-header text-center">
+        <div class="section-badge"><i class="fas fa-file-alt"></i> LaTeX Document</div>
+        <h2 class="section-title">Master Curriculum Vitae</h2>
+        <p class="section-subtitle">Formatted in Overleaf Latin Modern Roman typography. Single-page printable document.</p>
+      </div>
+
+      <div class="resume-preview-box glass-card">
+        <div class="resume-toolbar">
+          <div class="r-tool-left">
+            <span class="r-dot red"></span>
+            <span class="r-dot yellow"></span>
+            <span class="r-dot green"></span>
+            <span class="r-filename">Vinay_Kumar_CV.tex (Overleaf Template)</span>
+          </div>
+          <div class="r-tool-right">
+            <a href="resume.html" target="_blank" class="btn btn-sm btn-primary">
+              <i class="fas fa-external-link-alt"></i> Open Printable View
+            </a>
+            <a href="Vinay_Kumar_CV.tex" download="Vinay_Kumar_CV.tex" class="btn btn-sm btn-glass">
+              <i class="fas fa-download"></i> Download .tex
+            </a>
+          </div>
+        </div>
+
+        <div class="latex-paper-container">
+          <iframe src="resume.html" class="latex-frame" title="Resume Preview"></iframe>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Section 8: Contact Section -->
+  <section id="contact" class="section dark-bg">
+    <div class="section-container">
+      <div class="section-header text-center">
+        <div class="section-badge"><i class="fas fa-envelope"></i> Connect</div>
+        <h2 class="section-title">Let's Build Something Revolutionary</h2>
+        <p class="section-subtitle">Open for discussions on enterprise agentic platforms, consulting, and transformative AI leadership.</p>
+      </div>
+
+      <div class="contact-card-grid">
+        <a href="mailto:viinaimadotra@gmail.com" class="contact-card glass-card">
+          <div class="c-icon"><i class="fas fa-envelope text-cyan"></i></div>
+          <div class="c-label">Email Me</div>
+          <div class="c-val">viinaimadotra@gmail.com</div>
+        </a>
+
+        <a href="https://www.linkedin.com/in/viinai" target="_blank" class="contact-card glass-card">
+          <div class="c-icon"><i class="fab fa-linkedin text-violet"></i></div>
+          <div class="c-label">LinkedIn</div>
+          <div class="c-val">linkedin.com/in/viinai</div>
+        </a>
+
+        <a href="https://github.com/ViinAI" target="_blank" class="contact-card glass-card">
+          <div class="c-icon"><i class="fab fa-github text-green"></i></div>
+          <div class="c-label">GitHub</div>
+          <div class="c-val">github.com/ViinAI</div>
+        </a>
+
+        <div class="contact-card glass-card">
+          <div class="c-icon"><i class="fas fa-map-marker-alt text-yellow"></i></div>
+          <div class="c-label">Location</div>
+          <div class="c-val">Pune, Maharashtra, India</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="footer-container">
+      <div class="footer-left">
+        <span class="logo-bracket">&lt;</span><span class="logo-name">Vinay Kumar</span><span class="logo-accent">.AI</span><span class="logo-bracket">/&gt;</span>
+        <p>© 2026 Vinay Kumar. Built with high-performance Vanilla Web Stack. Deployed on Vercel.</p>
+      </div>
+      <div class="footer-right">
+        <a href="#hero" class="back-to-top"><i class="fas fa-arrow-up"></i> Top</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>
