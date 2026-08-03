@@ -6,22 +6,15 @@ const envPath = path.join(__dirname, '.env');
 let token = process.env.GITHUB_TOKEN;
 let username = process.env.GITHUB_USERNAME || 'ViinAI';
 
-if (!token && fs.existsSync(envPath)) {
-  const lines = fs.readFileSync(envPath, 'utf8').split(/\r?\n/);
-  for (const line of lines) {
-    if (line.startsWith('GITHUB_TOKEN=')) {
-      token = line.split('=')[1].trim();
-    }
-    if (line.startsWith('GITHUB_USERNAME=')) {
-      username = line.split('=')[1].trim();
-    }
-  }
+if (fs.existsSync(envPath)) {
+  const content = fs.readFileSync(envPath, 'utf8');
+  const matchToken = content.match(/GITHUB_TOKEN=([^\r\n]+)/);
+  if (matchToken) token = matchToken[1].trim();
+  const matchUser = content.match(/GITHUB_USERNAME=([^\r\n]+)/);
+  if (matchUser) username = matchUser[1].trim();
 }
 
-if (!token) {
-  console.error('Error: GITHUB_TOKEN not found in environment or .env file.');
-  process.exit(1);
-}
+console.log(`Debug: Username=${username}, TokenLength=${token ? token.length : 0}, TokenPrefix=${token ? token.substring(0, 7) : 'NONE'}`);
 
 const REPO = "Portfolio";
 const gitExe = 'C:\\msys64\\usr\\bin\\git.exe';
