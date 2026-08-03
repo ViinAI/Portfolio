@@ -99,8 +99,8 @@
       color: #111;
     }
 
-    /* Strategic Cascading Typography Hierarchy */
-    header { text-align: center; margin-bottom: 5px; }
+    /* 1. Header */
+    header { text-align: center; margin-bottom: 3px; }
     h1 {
       font-size: 24pt;
       font-weight: 700;
@@ -114,7 +114,7 @@
       margin-bottom: 2px;
     }
     .contact-line {
-      font-size: 9.8pt;
+      font-size: 10pt;
       color: #333;
     }
     .contact-line a {
@@ -123,58 +123,62 @@
     }
     .divider { margin: 0 4px; }
 
-    section { margin-bottom: 4px;
+    section {
+      margin-bottom: 4px;
       page-break-inside: avoid;
     }
+
+    /* 2. SECTION HEADINGS: 14pt */
     h2 {
-      font-size: 11.5pt;
+      font-size: 14pt;
       font-weight: 700;
-      border-bottom: 1px solid #111;
+      border-bottom: 1.2px solid #111;
       padding-bottom: 1.5px;
-      margin-bottom: 3.5px;
+      margin-top: 4px;
+      margin-bottom: 3px;
       letter-spacing: 0.1px;
     }
 
-    .summary-p {
-      text-align: justify;
-      margin-bottom: 4px;
-      font-size: 10.15pt;
-      line-height: 1.28;
-    }
-
+    /* 3. ORGANIZATION HEADINGS: 12pt */
     .company-block {
-      margin-bottom: 2px;
+      margin-bottom: 0px;
     }
     .company-block-sep {
-      margin-top: 5.5px;
+      margin-top: 12px;
+      margin-bottom: 2px;
     }
-
     .job-header {
       display: flex;
       justify-content: space-between;
       align-items: baseline;
       font-weight: 700;
-      margin-top: 4px;
+      margin-top: 2px;
       margin-bottom: 2px;
-      font-size: 10.4pt;
-      padding-bottom: 1.5px;
-      border-bottom: 0.75px solid #9ca3af;
+      font-size: 12pt;
     }
     .job-meta {
-      font-size: 9.8pt;
+      font-size: 10pt;
       color: #333;
       font-weight: 600;
     }
 
+    /* 4. INTERNAL SUB-HEADINGS: 10pt */
     .sub-heading {
       font-weight: 700;
-      font-size: 9.7pt;
+      font-size: 10pt;
       font-style: italic;
-      color: #2b2b2b;
-      margin-top: 3.5px;
+      color: #222;
+      margin-top: 3px;
       margin-bottom: 1px;
     }
 
+    /* 5. BODY TEXT & BULLETS: 10pt */
+    .summary-p {
+      text-align: justify;
+      margin-bottom: 3px;
+      font-size: 10pt;
+      line-height: 1.27;
+    }
     ul {
       list-style-type: disc;
       margin-left: 16px;
@@ -183,16 +187,16 @@
     li {
       margin-bottom: 1.8px;
       text-align: justify;
-      font-size: 10.1pt;
-      line-height: 1.27;
+      font-size: 10pt;
+      line-height: 1.26;
     }
     .skills-section li {
-      margin-bottom: 2.2px;
-      font-size: 10.05pt;
+      margin-bottom: 2px;
+      font-size: 10pt;
     }
     .education-item {
       margin-bottom: 1.5px;
-      font-size: 10.1pt;
+      font-size: 10pt;
     }
 
     @media print {
@@ -253,16 +257,11 @@
         <ul>
           <li>Independently architected diverse AI solutions — including a $300M Telecom transformation, Digital Tutor platform, and CMDB platform — driving multiple deal wins for Infosys.</li>
         </ul>
-
-        <div class="sub-heading">Technical</div>
-        <ul>
-          <li><strong>LLM Compiler:</strong> Built a proprietary LLM execution optimizer with dynamic prompt planning and semantic caching, reducing median query latency by 35%.</li>
-        </ul>
       </div>
 
       <div class="company-block company-block-sep">
         <div class="job-header">
-          <span>Xcaliber Infotech (A Phoenix Group Company) — Data Scientist / AI-ML Engineer</span>
+          <span>Xcaliber Infotech — AI Engineer</span>
           <span class="job-meta">Dec 2022 – Dec 2024, Pune</span>
         </div>
         <ul>
