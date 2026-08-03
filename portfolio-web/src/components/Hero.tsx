@@ -34,7 +34,7 @@ export function Hero({ onOpenResumeModal }: HeroProps) {
           {/* Eyebrow / Tagline */}
           <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#ffffff] border border-black/[0.06] text-[#1d1d1f] text-xs font-semibold mb-6">
             <span className="w-2 h-2 rounded-full bg-[#34c759] inline-block animate-pulse" />
-            <span>Senior AI Engineer • Infosys</span>
+            <span>Senior AI Engineer • Infosys Topaz</span>
           </div>
 
           {/* Apple Main Headline */}
@@ -45,11 +45,9 @@ export function Hero({ onOpenResumeModal }: HeroProps) {
             </span>
           </h1>
 
-          {/* Subtitle / Bio */}
-          <p className="text-base sm:text-lg md:text-xl text-[#6e6e73] font-normal leading-relaxed max-w-2xl mb-10">
-            Designing foundational <strong className="text-[#1d1d1f] font-semibold">Event-Driven Agent Engines</strong>,
-            isolated <strong className="text-[#1d1d1f] font-semibold">gVisor Sandboxes</strong>, and enterprise{' '}
-            <strong className="text-[#1d1d1f] font-semibold">Model Context Protocol (MCP)</strong> ecosystems across multi-million dollar transformations.
+          {/* Subtitle / Bio - Verbatim from CV Professional Summary */}
+          <p className="text-base sm:text-lg md:text-xl text-[#6e6e73] font-normal leading-relaxed max-w-3xl mb-10">
+            Senior AI Engineer with <strong className="text-[#1d1d1f] font-semibold">5+ years of experience</strong> building enterprise-scale GenAI and multi-agent systems. Skilled in end-to-end design, optimization, and deployment of LLM-powered automation with a strong focus on governance and scalability.
           </p>
 
           {/* Apple Action Buttons */}
