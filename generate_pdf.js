@@ -1,9 +1,8 @@
 const { chromium } = require('playwright');
 const path = require('path');
-const fs = require('fs');
 
 (async () => {
-  console.log('Generating exact pixel-perfect 1-page PDF from screen layout...');
+  console.log('Generating exact pixel-perfect 1-page PDF with embedded fonts...');
   const browser = await chromium.launch({ headless: true });
   const page = await browser.newPage({ viewport: { width: 1200, height: 1600 } });
   
@@ -11,7 +10,12 @@ const fs = require('fs');
   console.log('Loading:', resumeHtmlPath);
   
   await page.goto(resumeHtmlPath, { waitUntil: 'networkidle' });
-  await page.waitForTimeout(1000); // Ensure Google Fonts are fully rendered
+  
+  // Wait for all embedded fonts to be active in the rendering engine
+  await page.evaluate(async () => {
+    await document.fonts.ready;
+  });
+  await page.waitForTimeout(500);
 
   // Render the exact page element without artificial print margins
   await page.pdf({
@@ -27,6 +31,6 @@ const fs = require('fs');
     }
   });
 
-  console.log('✓ Vinay_Kumar_CV.pdf (exact 1-page) generated successfully!');
+  console.log('✓ Vinay_Kumar_CV.pdf generated with exact font matching!');
   await browser.close();
 })();
