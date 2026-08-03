@@ -1,8 +1,13 @@
 const { chromium } = require('playwright');
 const path = require('path');
+const fs = require('fs');
+
+if (!fs.existsSync('cvs')) {
+  fs.mkdirSync('cvs');
+}
 
 (async () => {
-  console.log('Generating exact pixel-perfect 1-page PDF with embedded fonts...');
+  console.log('Generating exact pixel-perfect 1-page PDF...');
   const browser = await chromium.launch({ headless: true });
   const page = await browser.newPage({ viewport: { width: 1200, height: 1600 } });
   
@@ -11,15 +16,14 @@ const path = require('path');
   
   await page.goto(resumeHtmlPath, { waitUntil: 'networkidle' });
   
-  // Wait for all embedded fonts to be active in the rendering engine
+  // Wait for all embedded fonts to be active
   await page.evaluate(async () => {
     await document.fonts.ready;
   });
   await page.waitForTimeout(500);
 
-  // Render the exact page element without artificial print margins
-  await page.pdf({
-    path: 'Vinay_Kumar_CV.pdf',
+  // Render to root and cvs/
+  const pdfBuffer = await page.pdf({
     format: 'A4',
     printBackground: true,
     pageRanges: '1',
@@ -31,6 +35,10 @@ const path = require('path');
     }
   });
 
-  console.log('✓ Vinay_Kumar_CV.pdf generated with exact font matching!');
+  fs.writeFileSync('Vinay_Kumar_CV.pdf', pdfBuffer);
+  fs.writeFileSync('cvs/Vinay_Kumar_CV.pdf', pdfBuffer);
+  fs.copyFileSync('resume.html', 'cvs/resume.html');
+
+  console.log('✓ Vinay_Kumar_CV.pdf and cvs/ deliverables generated successfully!');
   await browser.close();
 })();
